@@ -55,7 +55,7 @@ services:
   # # # # # # # # # # # # # # # # # # # # #
 
   nginx:
-    image: ghcr.io/carrismetropolitana/website-nginx:staging
+    image: ghcr.io/carrismetropolitana/cut-nginx:staging
     restart: unless-stopped
     mem_limit: 1g
     logging:
@@ -75,7 +75,7 @@ services:
   # # # # # # # # # # # # # # # # # # # # #
 
   backoffice:
-    image: ghcr.io/carrismetropolitana/website-backoffice:staging
+    image: ghcr.io/carrismetropolitana/cut-backoffice:staging
     restart: unless-stopped
     mem_limit: 6g
     logging:
@@ -89,7 +89,7 @@ services:
   # # # # # # # # # # # # # # # # # # # # #
 
   frontend:
-    image: ghcr.io/carrismetropolitana/website-frontend:staging
+    image: ghcr.io/carrismetropolitana/cut-frontend:staging
     restart: unless-stopped
     mem_limit: 6g
     logging:

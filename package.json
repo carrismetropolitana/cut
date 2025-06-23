@@ -3,12 +3,12 @@
 	"private": true,
 	"scripts": {
 		"build": "turbo build",
-		"build:frontend": "turbo build --filter=@carrismetropolitana/website-frontend",
+		"build:frontend": "turbo build --filter=@carrismetropolitana/cut-frontend",
 		"dev": "dotenv-run -f ./environments/development/secrets/.env -- turbo dev",
-		"dev:frontend": "dotenv-run -f ./environments/development/secrets/.env -- turbo dev --filter=@carrismetropolitana/website-frontend",
+		"dev:frontend": "dotenv-run -f ./environments/development/secrets/.env -- turbo dev --filter=@carrismetropolitana/cut-frontend",
 		"lint": "turbo lint",
 		"lint-fix": "turbo lint-fix",
-		"lint:frontend": "turbo lint --filter=@carrismetropolitana/website-frontend",
+		"lint:frontend": "turbo lint --filter=@carrismetropolitana/cut-frontend",
 		"purge": "sh purge.sh",
 		"start": "turbo start"
 	},

@@ -41,7 +41,7 @@ COPY package.json ./
 
 COPY . .
 
-RUN turbo prune --scope=@carrismetropolitana/website-${PROJECT} --docker
+RUN turbo prune --scope=@carrismetropolitana/cut-${PROJECT} --docker
 
 
 
@@ -76,7 +76,7 @@ COPY --from=pruner /app/out/full/ .
 
 RUN npx @helperkits/bumper /app/apps/${PROJECT}/package.json
 
-RUN turbo run build --filter=@carrismetropolitana/website-${PROJECT}
+RUN turbo run build --filter=@carrismetropolitana/cut-${PROJECT}
 
 
 
