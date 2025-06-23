@@ -6,11 +6,9 @@ import { Loader } from '@/components/common/Loader';
 import { useLocaleContext } from '@/contexts/Locale.context';
 import { useTranslations } from 'next-intl';
 import Script from 'next/script';
-
-import './widget-override.css';
 import { useEffect, useState } from 'react';
 
-import styles from './styles.module.css';
+import './widget-override.css';
 
 /* * */
 
@@ -24,33 +22,56 @@ export function SibsWidget() {
 	const localeContext = useLocaleContext();
 
 	const [isLoaded, setIsLoaded] = useState(false);
-
-	const token = 'MTMyLjEyMjg1MjcxMDk';
+	const [authToken, setAuthToken] = useState<null | string>(null);
 
 	//
-	// B. Handle actions
+	// B. Fetch data
 
 	useEffect(() => {
-		if (!isLoaded) return;
+		(async () => {
+			// Fetch the SIBS token from the API
+			const response = await fetch('/api/sibs-token');
+			if (!response.ok) throw new Error('Failed to fetch SIBS token');
+			const data = await response.json();
+			setAuthToken(data.auth_token);
+		})();
+	}, []);
+
+	//
+	// C. Handle actions
+
+	useEffect(() => {
+		if (!isLoaded || !authToken) return;
 		// Get widget elements by ID
 		const cardInputElement = document.getElementById('card-input');
 		const expDateElement = document.getElementById('exp-date-input');
 		const submitButtonElement = document.querySelector('#card-form button[type="submit"]');
 		if (!cardInputElement || !expDateElement || !submitButtonElement) return;
-		// Replace the placeholder text
+		// Replace the placeholder texts
 		cardInputElement.setAttribute('placeholder', t('card_input.placeholder'));
 		expDateElement.setAttribute('placeholder', t('exp_date_input.placeholder'));
 		submitButtonElement.textContent = t('submit_button.text');
-	}, [isLoaded, localeContext.data.current_locale]);
+	}, [isLoaded, authToken, localeContext.data.current_locale]);
+
+	useEffect(() => {
+		const handler = (e: Event) => {
+			const customEvent = e as CustomEvent<{ token: string }>;
+			console.log('Received new token from widget:', customEvent.detail.token);
+		};
+		// Listen for the custom event from the SIBS widget
+		document.addEventListener('sibsTokenInfo', handler);
+		// Cleanup event listener on unmount
+		return () => document.removeEventListener('sibsTokenInfo', handler);
+	}, []);
 
 	//
-	// C. Render components
+	// D. Render components
 
 	return (
-		<div className={styles.container}>
+		<>
 
-			<Script id="sibs-token-script" strategy="beforeInteractive">
-				{`var sibsWidgetAuthToken = '${token}';`}
+			<Script id="inject-sibs-auth-token-value" strategy="beforeInteractive">
+				{`var sibsWidgetAuthToken = '${authToken}';`}
 			</Script>
 
 			<Script
@@ -63,7 +84,7 @@ export function SibsWidget() {
 
 			<div id="sibs-widget-container" />
 
-		</div>
+		</>
 	);
 
 	//
