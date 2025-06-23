@@ -2,12 +2,9 @@
 
 /* * */
 
-import '@mantine/carousel/styles.layer.css';
-import '@mantine/charts/styles.layer.css';
 import '@mantine/core/styles.layer.css';
 import '@mantine/dates/styles.layer.css';
 import '@mantine/notifications/styles.css';
-import 'maplibre-gl/dist/maplibre-gl.css';
 
 /* * */
 
@@ -34,7 +31,7 @@ import TextInputOverride from '@/themes/_default/overrides/TextInput.module.css'
 
 /* * */
 
-export default createTheme({
+export const defaultTheme = createTheme({
 	//
 
 	components: {
@@ -106,7 +103,7 @@ export default createTheme({
 			} }),
 
 		SegmentedControl: SegmentedControl.extend({
-			classNames: (_, props) => {
+			classNames: () => {
 				let defaultClasses = {
 					control: SegmentedControlOverride.control,
 					indicator: SegmentedControlOverride.indicator,
@@ -114,9 +111,6 @@ export default createTheme({
 					label: SegmentedControlOverride.label,
 					root: SegmentedControlOverride.root,
 				};
-				if (props.variant === 'white') {
-					defaultClasses = combineClasses(defaultClasses, [SegmentedControlOverride.variantWhite]);
-				}
 				return defaultClasses;
 			},
 		}),

@@ -537,27 +537,6 @@
 			"subheading": "Nesta página encontra respostas às perguntas mais frequentes sobre o nosso serviço. Caso pretenda esclarecimentos adicionais não hesite em falar connosco."
 		}
 	},
-	"footer": {
-		"DebugToggle": {
-			"disabled": "Ligar Debug",
-			"enabled": "Desligar Debug"
-		},
-		"Footer": {
-			"copyright": "© Carris Metropolitana {year} - Todos os direitos reservados"
-		}
-	},
-	"header": {
-		"LocaleSwitcher": {
-			"en": {
-				"alt": "English",
-				"label": "English"
-			},
-			"pt": {
-				"alt": "Português",
-				"label": "Português"
-			}
-		}
-	},
 	"helpdesks": {
 		"Header": {
 			"frequent_travel": {
@@ -1846,6 +1825,27 @@
 			},
 			"found_items_counter": "{count, plural, =0 {Nenhum Veículo encontrado.} one {Encontrado # veículo:} other {Encontrados # veículos:}}",
 			"select_vehicle": "Selecione um veículo"
+		}
+	},
+	"viewport": {
+		"Footer": {
+			"copyright": "© Carris Metropolitana {year} - Todos os direitos reservados",
+			"links": {
+				"conditions": "Condições Gerais de Transporte",
+				"cookies": "Política de Cookies",
+				"legal": "Aviso Legal",
+				"privacy": "Política de Privacidade"
+			}
+		},
+		"LocaleSwitcher": {
+			"en": {
+				"alt": "English",
+				"label": "EN"
+			},
+			"pt": {
+				"alt": "Português",
+				"label": "PT"
+			}
 		}
 	}
 }

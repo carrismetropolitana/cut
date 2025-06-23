@@ -7,10 +7,6 @@
 	border-radius: 5px;
 }
 
-.root.variantWhite {
-	background-color: rgb(255 255 255 / 50%);
-}
-
 @media (width <= 350px) {
 	.root {
 		flex-direction: column;
@@ -26,7 +22,6 @@
 
 .control {
 	display: flex;
-	align-items: center;
 	justify-content: center;
 }
 
@@ -43,10 +38,6 @@
 .indicator {
 	background-color: var(--color-system-background-100);
 	box-shadow: 0 0 5px 0 rgb(0 0 0 / 10%);
-}
-
-.indicator.variantWhite {
-	background-color: var(--color-primary-white);
 }
 
 /* * */
@@ -79,20 +70,6 @@
 
 .label[data-disabled="true"] {
 	opacity: 0.15;
-}
-
-.label.variantWhite {
-	padding: 7px 25px;
-	font-size: 14px;
-	color: var(--color-primary-black);
-	opacity: 0.65;
-
-	--sc-color: var(--color-primary-white); /* Fix flashing before loading js */
-}
-
-.label.variantWhite[data-active="true"] {
-	color: var(--color-primary-black);
-	opacity: 1;
 }
 
 /* * */

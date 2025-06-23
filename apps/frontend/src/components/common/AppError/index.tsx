@@ -2,7 +2,6 @@
 
 /* * */
 
-import { useAnalyticsContext } from '@/contexts/Analytics.context';
 import { Button } from '@mantine/core';
 import { IconTrafficCone } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
@@ -19,18 +18,11 @@ export function AppError({ error }) {
 	// A. Setup variables
 
 	const t = useTranslations('common.AppError');
-	const analyticsContext = useAnalyticsContext();
 
 	const [reloadInSeconds, setReloadInSeconds] = useState(30);
 
 	//
 	// B. Transform data
-
-	useEffect(() => {
-		analyticsContext.actions.capture((ampli, props) => {
-			ampli.applicationErrored({ ...props, error_title: error.message, error_type: error.name });
-		});
-	}, []);
 
 	useEffect(() => {
 		const interval = setInterval(() => {

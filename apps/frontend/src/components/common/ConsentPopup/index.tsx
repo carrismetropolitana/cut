@@ -3,7 +3,7 @@
 /* * */
 
 import { Link } from '@/components/common/Link';
-import { Logo } from '@/components/header/Logo';
+import { Logo } from '@/components/viewport/Logo';
 import { useAnalyticsContext } from '@/contexts/Analytics.context';
 import { useConsentContext } from '@/contexts/Consent.context';
 import { Button, Checkbox, Modal } from '@mantine/core';
