@@ -1,9 +1,8 @@
 /* * */
 
-import { Button } from '@mantine/core';
+import { SibsWidget } from '@/components/home/SibsWidget';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import Link from 'next/link';
 
 import styles from './styles.module.css';
 
@@ -29,7 +28,7 @@ export function HomePage() {
 				<span>{t('title')}</span>
 				<span className={styles.subtitle}>{t('subtitle')}</span>
 			</h1>
-			<Button component={Link} href="/about">{t('start')}</Button>
+			<SibsWidget />
 		</div>
 	);
 

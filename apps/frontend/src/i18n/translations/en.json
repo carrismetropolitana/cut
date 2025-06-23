@@ -15,6 +15,17 @@
 			"start": "Consultar Viagens",
 			"subtitle": "Carris Metropolitana",
 			"title": "Portal do Utilizador"
+		},
+		"SibsWidget": {
+			"card_input": {
+				"placeholder": "Your card number"
+			},
+			"exp_date_input": {
+				"placeholder": "MM / DD"
+			},
+			"submit_button": {
+				"text": "View my Trips"
+			}
 		}
 	},
 	"viewport": {
