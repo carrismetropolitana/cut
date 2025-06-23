@@ -1,0 +1,48 @@
+/* * */
+/* HEADINGS */
+
+.headingWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-spacing-5);
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 100%;
+}
+
+@media (width <= 650px) {
+	.headingWrapper {
+		padding: var(--size-spacing-20);
+		padding-bottom: 0;
+		padding-left: var(--size-spacing-25);
+	}
+}
+
+.heading {
+	font-size: 20px;
+	font-weight: var(--font-weight-semibold);
+	color: var(--color-system-text-100);
+}
+
+.subheading {
+	font-size: 14px;
+	font-weight: var(--font-weight-medium);
+	color: var(--color-system-text-300);
+}
+
+
+/* * */
+/* VIDEO */
+
+.video {
+	display: flex;
+	width: 100%;
+	clip-path: inset(1px 1px 1px 1px);
+}
+
+.videoWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}

@@ -1,0 +1,48 @@
+/* * */
+/* CONTAINER */
+
+.contentWrapper {
+	display: grid;
+	grid-template:
+		"a b" minmax(500px, auto) / 1fr 1fr;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 100%;
+}
+
+@media (width < 1000px) {
+	.contentWrapper {
+		grid-template:
+			"b" 300px [b_]
+			"a" auto [a_] / 1fr;
+		gap: var(--size-spacing-30);
+	}
+}
+
+/* * */
+/* GROUPS WRAPPER */
+
+.groupsWrapper {
+	grid-area: a;
+	height: 100%;
+	overflow: hidden;
+}
+
+
+/* * */
+/* MAP WRAPPER */
+
+.mapWrapper {
+	position: sticky;
+	top: var(--size-height-header);
+	grid-area: b;
+	height: 100%;
+	max-height: calc(100vh - var(--size-height-header));
+}
+
+@media (width < 1000px) {
+	.mapWrapper {
+		position: static;
+		height: 300px;
+	}
+}

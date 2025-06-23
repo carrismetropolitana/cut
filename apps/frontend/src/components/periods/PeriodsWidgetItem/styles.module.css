@@ -1,0 +1,32 @@
+/* * */
+/* CONTAINER */
+
+.container {
+	display: flex;
+	flex-direction: row;
+	gap: var(--size-spacing-15);
+	align-items: center;
+	justify-content: flex-start;
+	min-width: fit-content;
+	color: var(--color-system-text-300);
+}
+
+.container.isActive {
+	color: var(--color-system-text-100);
+}
+
+/* * */
+/* NAME */
+
+.name {
+	font-size: 18px;
+	font-weight: var(--font-weight-bold);
+}
+
+/* * */
+/* DATE */
+
+.date {
+	font-size: 16px;
+	font-weight: var(--font-weight-medium);
+}

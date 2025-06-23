@@ -1,0 +1,36 @@
+/* * */
+/* CONTAINER */
+
+.container {
+	display: flex;
+	flex-direction: row;
+	gap: var(--size-spacing-15);
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: var(--size-spacing-15);
+	overflow-x: auto;
+}
+
+@media (width <= 800px) {
+	.container {
+		padding-right: 30px;
+	}
+}
+
+/* * */
+/* DIVIDER */
+
+.divider {
+	width: 100%;
+	min-width: 100px;
+	height: 2px;
+	background-color: var(--color-system-text-300);
+	border-radius: 999px;
+}
+
+@media (width <= 800px) {
+	.divider {
+		min-width: 50vw;
+	}
+}

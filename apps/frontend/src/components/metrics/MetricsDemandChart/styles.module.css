@@ -1,0 +1,93 @@
+/* * */
+/* CONTAINER */
+
+.container {
+	overflow: hidden;
+	width: 100%;
+	border-radius: var(--border-radius-lg);
+	border: 1px solid var(--color-system-border-100);
+	background-color: var(--color-system-background-200);
+	box-shadow: var(--box-shadow-lg);
+	position: relative;
+	color: var(--color-system-text-300);
+}
+
+/* * */
+/* METRICS WRAPPER */
+
+.metricsWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-spacing-15);
+	padding: var(--size-spacing-20);
+	z-index: 2;
+}
+
+/* * */
+/* ROW WRAPPER */
+
+.rowWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+}
+
+/* * */
+/* REALTIME VALUE WRAPPER */
+
+.realtimeValueWrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: var(--size-spacing-5);
+}
+
+/* * */
+/* VALUE */
+
+.value {
+	line-height: 1;
+	font-weight: var(--font-weight-extrabold);
+	color: var(--color-system-text-100);
+}
+
+.primary .value {
+	font-size: 30px;
+}
+
+.secondary .value {
+	font-size: 20px;
+}
+
+/* * */
+/* LABEL */
+
+.label {
+	color: var(--color-system-text-300);
+	font-weight: var(--font-weight-bold);
+}
+
+.primary .label {
+	font-size: 16px;
+}
+
+.secondary .label {
+	font-size: 14px;
+}
+
+/* * */
+/* DESCRIPTION */
+
+.description {
+	font-size: 16px;
+	color: var(--color-system-text-300);
+	font-weight: var(--font-weight-medium);
+}
+
+/* * */
+/* GRAPH WRAPPER */
+
+.graphWrapper {
+	width: 100%;
+	z-index: 1;
+}

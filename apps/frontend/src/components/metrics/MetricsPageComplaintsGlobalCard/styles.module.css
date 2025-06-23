@@ -1,0 +1,136 @@
+/* CONTAINER */
+.container{
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;   
+    padding: 20px;
+    text-align: center;
+    background-color: var(--color-system-background-100);
+    border: 1px solid 	var(--color-system-border-200);
+    border-radius: 20px;
+}
+
+/* *  */
+/* GLOBAL CARD FIRST ROW */
+.globalCardFirstRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+@media(width <= 650px) {
+	.globalCardFirstRow {
+        grid-template-columns: 1fr;
+        gap: 0;
+	}
+}
+
+/* * */
+/* GLOBAL CARD SECOND ROW */
+.globalCardSecondRow {
+    display: flex;
+    flex-flow: row;
+    gap: 30px;
+    width: 100%;
+    border-top: 1px solid var(--color-system-border-200);
+
+}
+
+@media(width <= 650px) {
+	.globalCardSecondRow {
+        flex-direction: column;
+        gap: 0;
+	}
+}
+
+/* *  */
+/* TOTAL PASSENGERS BY DAY LAST WEEK */ 
+.totalPassengersContactsValue{
+    font-size: 50px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-system-text-200); 
+}
+
+.totalPassengersContactsDescription{
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-system-text-200);
+}
+
+/*  *  */
+/* TOTAL CONTACTS LAST WEEK */ 
+.totalContactsValue{
+    font-size: 50px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-system-text-200); 
+}
+
+.totalContactsDescription{
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-system-text-200);
+}
+
+/*  *  */
+/* TOTAL EMAIL CONTACTS LAST WEEK */ 
+.totalEmailContactsValuesWrapper,
+.totalPhoneContactsValuesWrapper {
+    display:grid;
+    grid-template-columns: auto max-content;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 40px;
+    margin-top: 20px;
+    background-color: var(--color-system-background-300);
+    border-radius: 20px;
+}
+
+.totalEmailContactsValue,
+.totalPhoneContactsValue {
+    font-size: 50px;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-system-text-200); 
+}
+
+.totalEmailContactsDescription{
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-system-text-200); 
+}
+
+.totalPhoneContactsDescription{
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-system-text-200); 
+}
+
+/* ICON CONTAINER */
+.iconContainer{
+    align-content: center;
+    margin: 0 auto;
+    background-color: var(--color-system-background-300);
+    border-radius: 20px;
+
+}
+
+/* ICON COLORS */
+.icon{
+    color: var(--color-system-text-300);
+}
+
+/* LAST UPDATED */
+.lastUpdatedDate {
+    width: 100%;
+    padding: 10px;
+    font-size: var(--font-size-muted);
+    font-weight: var(--font-weight-muted);
+    color: var(--color-system-text-300);
+    text-align:center;
+}

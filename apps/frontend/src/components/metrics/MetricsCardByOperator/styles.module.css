@@ -1,0 +1,78 @@
+/* * */
+/* CONTAINER */
+
+.container {
+	overflow: hidden;
+	width: 100%;
+	border-radius: var(--border-radius-lg);
+	border: 1px solid var(--color-system-border-100);
+	background-color: var(--color-brand);
+	position: relative;
+	color: var(--color-primary-black);
+	height: 100%;
+}
+
+.backgroundImage {
+	position: absolute;
+	z-index: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.7);
+}
+
+/* * */
+/* METRICS WRAPPER */
+
+.metricsWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-spacing-5);
+	padding: var(--size-spacing-20);
+	z-index: 2;
+	padding-bottom: 80px;
+}
+
+.value {
+	font-size: 26px;
+	z-index: 2;
+	font-weight: var(--font-weight-extrabold);
+}
+
+.label {
+	font-size: 14px;
+	text-transform: lowercase;
+	opacity: 0.6;
+}
+
+
+
+/* * */
+/* POPOVER */
+
+.popoverAnchor {
+	display: flex;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 18px;
+	height: 18px;
+	z-index: 3;
+	color: var(--color-system-text-400);
+}
+
+.popoverText,
+.popoverLink {
+	font-size: var(--font-size-muted);
+	font-weight: var(--font-weight-muted);
+	color: var(--color-system-text-200);
+}
+
+.popoverLink {
+	text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+	.backgroundImage {
+		transform: translate(-30%, -50%) scale(0.35);
+	}
+}

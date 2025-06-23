@@ -1,0 +1,21 @@
+/* * */
+/* CAROUSEL ITEM */
+
+.carouselItem {
+	padding-left: var(--size-spacing-20);
+}
+
+/* * */
+/* DISCLAIMER */
+
+.disclaimer {
+	display: block;
+	max-width: 700px;
+	padding: 20px;
+	font-size: 12px;
+	color: var(--color-system-text-300);
+}
+
+.disclaimer:hover {
+	text-decoration: underline;
+}

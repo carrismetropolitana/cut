@@ -1,0 +1,28 @@
+{
+	"name": "@carrismetropolitana/cut",
+	"private": true,
+	"scripts": {
+		"build": "turbo build",
+		"build:frontend": "turbo build --filter=@carrismetropolitana/website-frontend",
+		"dev": "dotenv-run -f ./environments/development/secrets/.env -- turbo dev",
+		"dev:frontend": "dotenv-run -f ./environments/development/secrets/.env -- turbo dev --filter=@carrismetropolitana/website-frontend",
+		"lint": "turbo lint",
+		"lint-fix": "turbo lint-fix",
+		"lint:frontend": "turbo lint --filter=@carrismetropolitana/website-frontend",
+		"purge": "sh purge.sh",
+		"start": "turbo start"
+	},
+	"devDependencies": {
+		"@carrismetropolitana/eslint": "20250622.1204.50",
+		"@dotenv-run/cli": "1.3.6",
+		"turbo": "2.5.4",
+		"typescript": "5.8.3"
+	},
+	"packageManager": "npm@11.4.2",
+	"engines": {
+		"node": ">=18"
+	},
+	"workspaces": [
+		"apps/*"
+	]
+}

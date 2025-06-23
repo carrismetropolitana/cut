@@ -1,0 +1,40 @@
+/* * */
+/* CARD */
+
+.cardWrapper {
+	display: flex;
+	flex-direction: row;
+	gap: var(--size-spacing-20);
+	align-items: flex-start;
+	justify-content: flex-start;
+	padding: var(--size-spacing-20);
+	background-color: var(--color-system-background-100);
+	border: 1px solid var(--color-system-border-100);
+	border-radius: var(--border-radius-lg);
+}
+
+@media (width <= 500px) {
+    .cardWrapper {
+        flex-direction: column;
+    }
+}
+
+.cardImage {
+	width: 75px;
+	aspect-ratio: 1/1;
+	border: 2px solid var(--color-system-border-100);
+	border-radius: 999px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    grid-gap: var(--size-spacing-5);
+}
+
+.validity{
+	padding-top: var(--size-spacing-5);
+    font-size: 12px;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-system-text-300);
+}

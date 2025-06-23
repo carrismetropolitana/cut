@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.qrCode {
+    padding: var(--size-spacing-10);
+    margin: var(--size-spacing-10);
+    border-radius: 5px;
+    background-color: var(--color-primary-white);
+}

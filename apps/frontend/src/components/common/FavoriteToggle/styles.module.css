@@ -1,0 +1,27 @@
+/* * */
+/* CONTAINER */
+
+.container {
+	display: inline-flex;
+	color: var(--color-system-text-300);
+	cursor: pointer;
+	transition: all 200ms ease;
+}
+
+.container:hover {
+	color: var(--color-system-text-200);
+}
+
+.container:active {
+	transform: scale(1);
+}
+
+/* * */
+/* CONTAINER / DISABLED */
+
+.container.disabled,
+.container.disabled:hover {
+	color: var(--color-system-text-400);
+	cursor: help;
+	transform: scale(1);
+}

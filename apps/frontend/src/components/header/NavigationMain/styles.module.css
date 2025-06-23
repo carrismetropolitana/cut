@@ -1,0 +1,13 @@
+/* * */
+/* CONTAINER */
+
+.container {
+	display: flex;
+	flex-direction: row;
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    display: none;
+  }
+}

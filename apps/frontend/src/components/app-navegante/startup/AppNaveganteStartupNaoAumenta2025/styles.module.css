@@ -1,0 +1,28 @@
+/* * */
+/* CONTAINER & WRAPPERS */
+
+.container,
+.actionsWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	text-align: center;
+}
+
+/* * */
+/* VIDEO */
+
+.video {
+	width: 100%;
+	max-width: 600px;
+}
+
+/* * */
+/* ACTIONS */
+
+.actionsWrapper {
+	gap: var(--size-spacing-30);
+	padding: var(--size-spacing-30) var(--size-spacing-15);
+}

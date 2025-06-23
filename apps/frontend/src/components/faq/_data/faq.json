@@ -1,0 +1,190 @@
+[
+
+	{
+		"_id": "A",
+		"items": [
+			{
+				"_id": "A1",
+				"body": "<p>O projeto Carris Metropolitana é uma iniciativa dos 18 municípios da área metropolitana de Lisboa (AML) que, através da Transportes Metropolitanos de Lisboa,funde a operação de transporte público rodoviário de toda a amL numa só imagem e serviço.</p>",
+				"title": "O que é a Carris Metropolitana?"
+			},
+			{
+				"_id": "A2",
+				"body": "<p>A Carris Metropolitana opera nos 18 municípios da AML: Alcochete, Almada, Amadora, Barreiro*, Cascais*, Lisboa*, Loures, Oeiras, Odivelas, Mafra, Moita, Montijo, Palmela, Seixal, Sesimbra, Setúbal, Sintra e Vila Franca de Xira.</p><p>*Barreiro, Cascais e Lisboa são servidos, em maior parte, pelos respetivos operadores municipais.</p>",
+				"title": "Em que municípios opera a Carris Metropolitana?"
+			},
+			{
+				"_id": "A3",
+				"body": "<p>A Carris Metropolitana e a Carris são entidades e marcas distintas, cada uma com as suas operações e áreas geográficas específicas.</p><p>A Carris Metropolitana é a marca estabelecida pela Transportes Metropolitanos de Lisboa (TML), que gere os serviçosde transporte público rodoviário em várias regiões municipais e intermunicipais da área metropolitana.</p><p>Por sua vez, a Carris opera exclusivamente no município de Lisboa, tal como a MobiCascais em Cascais e os TCB (Transportes Coletivos do Barreiro) no Barreiro.</p>",
+				"title": "A Carris Metropolitana faz parte da Carris?"
+			}
+		],
+		"title": "Carris Metropolitana"
+	},
+
+	{
+		"_id": "B",
+		"items": [
+			{
+				"_id": "B1",
+				"body": "<p>Com a entrada da Carris Metropolitana deixaram de prestar serviço na AML as empresas de transportes: Boa Viagem, Henrique Leonardo da Mota, Isidoro Duarte, JJ Santo António, Mafrense, Sulfertagus, TST, Vimeca, Scotturb.</p>",
+				"title": "Quais são as empresas que deixaram de prestar serviço na amL com a entrada em operação da Carris Metropolitana?"
+			},
+			{
+				"_id": "B2",
+				"body": "<p>A frota da Carris Metropolitana possui idade média inferior a 1 ano onde 5% dos veículos são não poluentes, energeticamente eficientes e 90% possuem classe de emissões EURO V ou superior.</p>",
+				"title": "Os autocarros da Carris Metropolitana são novos?"
+			},
+			{
+				"_id": "B3",
+				"body": "<p>Os operadores prestadores de serviço da Carris Metropolitana são 4 e estão divididos por áreas da seguinte forma:</p><p>Área 1: Viação Alvorada<br/>Área 2: Rodoviária de Lisboa<br/>Área 3: TST<br/>Área 4: Alsa Todi</p>",
+				"title": "Quais são os operadores prestadores de serviço que atuam sob a marca Carris Metropolitana?"
+			},
+			{
+				"_id": "B4",
+				"body": "<p>A Área 1 inclui os municípios da Amadora, Oeiras, Sintra, Cascais* e Lisboa*.</p><p>A Área 2 inclui os municípios de Mafra, Vila Franca de Xira, Odivelas e Loures</p><p>A Área 3 inclui os municípios de Almada, Seixal e Sesimbra.</p><p>A Área 4 inclui os municípios de Alcochete, Moita, Montijo, Palmela, Setúbal e Barreiro*.</p><p>*Apenas serviço intermunicipal</p>",
+				"title": "Quais municípios constituem cada uma das áreas?"
+			},
+			{
+				"_id": "B5",
+				"body": "<p>. Renovação e qualificação da frota, incluindo veículos acessíveis, não poluentes e energicamente eficientes<br/>. Inclusão de serviços de entretenimento/informação e Wi-Fi a bordo<br/>. Eco-condução, aumento de oferta e promoção da pontualidade<br/>. Planeamento e ajuste do serviço<br/>. Aumento substancial da rede de vendas e serviços de apoio ao passageiro<br/>. Integração tecnológica</p>",
+				"title": "Quais são algumas das exigências contratuais?"
+			},
+			{
+				"_id": "B6",
+				"body": "<p>Poderá reportar falhas e atrasos através da linha de apoio 210 410 800 ou através do <a href=\"https://www.carrismetropolitana.pt/apoio/\">formulário disponível no site</a>.</p>",
+				"title": "Para onde posso relatar falhas e atrasos?"
+			}
+		],
+		"title": "Operação"
+	},
+
+	{
+		"_id": "C",
+		"items": [
+			{
+				"_id": "C1",
+				"body": "<p>Poderá consultar os horários e percursos de toda a nossa frota na página <a href=\"https://www.carrismetropolitana.pt/horarios/\" target=\"_blank\">Horários</a> no menu Viajar.</p>",
+				"title": "Onde posso consultar os horários e percursos? "
+			},
+			{
+				"_id": "C2",
+				"body": "<p>Os períodos da Carris Metropolitana são estabelecidos anualmente de forma a serem ajustados com as calendarizações de cada município. Para o ano de 2023, os períodos são:</p><p>· O período de verão corresponde de 01/07/2024 a 31/08/2024.</p><p>· O período de férias escolares corresponde aos dias 28/03/2024 à 02/04/2024.</p><p>· O período escolar corresponde aos dias de 15/02/2024 a 27/03/2024 e de 03/04/2024 a 30/06/2024.</p>",
+				"title": "A que datas correspondem o período de verão, período escolar e o período de férias escolares? "
+			}
+		],
+		"title": "Horários"
+	},
+
+	{
+		"_id": "D",
+		"items": [
+			{
+				"_id": "D1",
+				"body": "<p>Existem 5 categorias de tarifários, com tarifa de bordo ou pré-pago, associadas aos diferentes tipos de linhas. </p><p><strong>Linha Próxima = Tarifa 1</strong>,<strong> serve as áreas 1, 2, 3 e 4 e está assinalada pela cor azul</strong>. Para viagens ocasionais, o navegante® a bordo tem o valor de 1,25€ e o navegante® pré-pago 0,85€. Para viagens frequentes, o navegante® Municipal tem o valor de 30€/mês e o navegante® Metropolitano, 40€/mês.</p><p><strong>Linha Longa = Tarifa 2</strong>, <strong>serve as áreas 1, 2, 3 e 4 <strong>e est</strong>á assinalada pela cor vermelha</strong>. Para viagens ocasionais, o navegante® a bordo tem o valor de 2,60€ e o navegante® pré-pago 1,55€. Para viagens frequentes, o navegante® Municipal tem o valor de 30€/mês e o navegante® Metropolitano, 40€/mês.</p><p><strong>Linha Rápida = Tarifa 3</strong>, <strong>serve as áreas 1, 2, 3 e 4 e está assinalada pela cor amarela</strong>. Para viagens ocasionais, o navegante® a bordo tem o valor 4,50€ e o navegante® pré-pago 3,10€. Para viagens frequentes, o navegante® Municipal tem o valor de 30€/mês e o navegante® Metropolitano, 40€/mês.</p><p><strong>Linha Inter-Regional = Tarifa 4</strong>, <strong>serve apenas as áreas 2 e 4 e está assinalada pela cor roxa</strong>. Na área 2, para viagens ocasionais, o navegante® a bordo tem o valor de 2,60€, mais 0,50€ caso seja fora da amL.  Na área 4, para viagens ocasionais, o navegante® a bordo tem o valor de 2,60€, mais 1€ caso seja fora da amL. Em ambas as áreas, para viagens frequentes, o navegante® Municipal tem o valor de 30€, mais 20€ caso seja fora da amL e o navegante® Metropolitano, 40€, mais 20€ fora da amL.</p><p><strong>Linha Mar = Tarifa 5</strong>, <strong>serve as áreas 2, 3 e 4 e está assinalada pela cor verde</strong>. Para viagens ocasionais, o navegante® a bordo tem o valor de 4,50€ e o navegante® pré-pago 3,10€. </p>",
+				"title": "Quantos tipos de tarifários existem na Carris Metropolitana e como posso identificá-los?"
+			},
+			{
+				"_id": "D2",
+				"body": "<p>Sim, o navegante® Municipal é válido em todas as linhas da Carris Metropolitana de âmbito geográfico municipal e nos restantes operadores de serviço público de transporte regular, apenas dentro dos limites do município da área metropolitana de Lisboa para o qual foi adquirido.</p>",
+				"title": "Posso utilizar o navegante® Municipal na Carris Metropolitana?"
+			},
+			{
+				"_id": "D3",
+				"body": "<p>Sim, o navegante® Metropolitano é válido em todas as linhas da Carris Metropolitana e nos restantes operadores de serviço público de transporte regular, nos 18 municípios da área metropolitana de Lisboa.</p>",
+				"title": "Posso utilizar o navegante® Metropolitano na Carris Metropolitana?"
+			},
+			{
+				"_id": "D4",
+				"body": "<p>As crianças podem viajar gratuitamente nos transportes públicos até aos 3 anos de idade quando acompanhadas de um adulto.</p>",
+				"title": "Até que idade as crianças podem andar gratuitamente na Carris Metropolitana?"
+			},
+			{
+				"_id": "D5",
+				"body": "<p>Não, com a saída de operação das empresas de transporte (TST, Sulfertagus, Vimeca, Scotturb, Rodoviária de Lisboa, JJ Santo António, Isidoro Duarte, Henrique Leonardo da Mota, Mafrense e Boa Viagem) os títulos mensais também deixaram de ser comercializados. Poderá optar por um dos tarifários suportados pelo <a href=\"https://www.navegante.pt/viajar/tarifario-navegante\" target=\"_blank\">navegante®</a>.</p>",
+				"title": "Tinha uma assinatura de linha mensal de um dos operadores que deixou de prestar serviço, vou poder carregar o título correspondente na Carris Metropolitana?"
+			},
+			{
+				"_id": "D6",
+				"body": "<p>Não, esta forma de pagamento não está disponível para a Carris Metropolitana.</p>",
+				"title": "Posso utilizar o VivaGo para pagar viagens na Carris Metropolitana?"
+			}
+		],
+		"title": "Tarifários"
+	},
+
+	{
+		"_id": "E",
+		"items": [
+			{
+				"_id": "E1",
+				"body": "<p>São pontos de atendimento presenciais disponíveis para os nossos passageiros. Os Espaços navegante® Carris Metropolitana estão dedicados a prestar informações sobre a rede Carris Metropolitana e a bilhética, possibilitando o esclarecimento de dúvidas, a solicitação de emissão de cartões navegante® e a adesão a perfis.</p>",
+				"title": "O que são os Espaços navegante® Carris Metropolitana?"
+			},
+			{
+				"_id": "E2",
+				"body": "<p>Através da página <a href=\"/stores\" target=\"_blank\">Espaços navegante®</a> poderá consultar o número de pessoas na fila e tempo previsto de espera. É possível também verificar as moradas, localização no mapa e horários.</p>",
+				"title": "Como posso verificar o tempo real dos Espaços navegante® Carris Metropolitana?"
+			}
+		],
+		"title": "Espaços navegante® Carris Metropolitana"
+	},
+
+	{
+		"_id": "F",
+		"items": [
+			{
+				"_id": "F1",
+				"body": "<p>As justificações devem ser solicitadas ao operador de transporte da área em questão. Através do e-mail, deve indicar a linha, o dia e a hora do atraso ocorrido.</p><p>Área 1: <a href=\"mailto:passageiro@viacaoalvorada.pt\" target=\"_blank\">passageiro@viacaoalvorada.pt</a><br/>Área 2: aceda ao site <a href=\"https://www.rodoviariadelisboa.pt/pedidoDeclaracao\" target=\"_blank\">https://www.rodoviariadelisboa.pt/pedidoDeclaracao</a> e preencha todos os dados solicitados.<br/>Área 3: Aceda ao site <a href=\"https://www.tsuldotejo.pt\" target=\"_blank\">www.tsuldotejo.pt</a> e preencha todos os dados solicitados.<br/>Área 4: <a href=\"mailto:passageiros@alsa.com\" target=\"_blank\">passageiros@alsa.com</a></p>",
+				"title": "Como posso solicitar uma justificação de atraso e incumprimento?"
+			},
+			{
+				"_id": "F2",
+				"body": "<p>A Declaração de Oferta de Transportes Insuficiente destina-se a passageiros com mobilidade reduzida que impossibilitem ou dificultem o transbordo, ou passageiros que tenham acessibilidade condicionada ou inexistência de circulações Carris Metropolitana que o transportem do local de origem ao destino pretendido.</p><p>Para que seu pedido seja analisado, deverá esclarecer os seguintes pontos junto do suporte ao passageiro através do e-mail: contacto@carrismetropolitana.pt.</p><p>· Qual o motivo do pedido da declaração;</p><p>· Morada do local de partida e do destino, bem como os horários em que pretende viajar;</p><p>· Nome completo, Número de identificação e Número de Contribuinte;</p>",
+				"title": "Como posso solicitar declaração de serviço inexistente?"
+			},
+			{
+				"_id": "F3",
+				"body": "<p>A Carris Metropolitana não efetua este tipo de declaração. Caso necessite para apresentar à entidade patronal, as faturas ou comprovativos da compra do passe comprovam os valores e a utilização dos mesmos.</p>",
+				"title": "É possível solicitar a declaração de subsídio de transporte?"
+			},
+			{
+				"_id": "F4",
+				"body": "<p>Poderá entrar em contacto com a linha de apoio 210 418 800 ou através do formulário disponível na página de <a href=\"https://www.carrismetropolitana.pt/apoio/\" target=\"_blank\">Apoio ao passageiro</a> no site</p>",
+				"title": "Como posso entrar em contacto com a linha de apoio?"
+			},
+			{
+				"_id": "F5",
+				"body": "<p>As reclamações podem ser feitas no livro de reclamações presencialmente nos Espaços navegante® Carris Metropolitana ou no livro de reclamações online disponível <a href=\"https://www.livroreclamacoes.pt/Inicio/\" target=\"_blank\">aqui</a></p>",
+				"title": "Onde posso fazer uma reclamação no livro de reclamações?"
+			},
+			{
+				"_id": "F6",
+				"body": "<p>O serviço da Carris Metropolitana destina-se exclusivamente ao transporte público rodoviário, seguindo um Plano de Operação definido e contratualizado para atender às necessidades da população e a eventos específicos de alta demanda. Para tal efeito, sugerimos que entre em contacto com uma empresa especializada.</p>",
+				"title": "Posso alugar um autocarro da Carris Metropolitana?"
+			},
+			{
+				"_id": "F7",
+				"body": "<p>Sim, é permitido aos passageiros transportar gratuitamente animais de companhia que não ofereçam perigosidade, desde que estejam açaimados e devidamente encerrados em contentor apropriado que possa ser transportado como bagagem de mão. Cada passageiro não pode transportar mais de um contentor com animais de companhia.</p><p>Nos períodos de maior afluência, o operador pode recusar o transporte de animais de companhia. Caso haja incumprimento destas condições, o trabalhador ao serviço do operador pode determinar a saída do passageiro e respetivo animal de companhia, sem direito a qualquer reembolso.</p>",
+				"title": "É permitido transportar animais na Carris Metropolitana?"
+			},
+			{
+				"_id": "F8",
+				"body": "<p>Sim, são transportados gratuitamente e não precisam de estar açaimados os cães de assistência ou cães guia que acompanham passageiros invisuais, com deficiência auditiva, deficiência mental, orgânica ou motora. No entanto, é necessário que o cão de assistência ou guia transporte um distintivo emitido por um estabelecimento nacional ou internacional de treino de cães de assistência, que o identifica como tal.</p>",
+				"title": "Os cães de assistência ou cães guia são permitidos?"
+			},
+			{
+				"_id": "F9",
+				"body": "<p>O transporte de bicicletas e trotinetes elétricas depende da disponibilidade de espaço e do veículo. Em alguns casos, pode ser permitido transportar até 3 bicicletas, mas a decisão final é do motorista ou agente de fiscalização, levando em consideração a lotação do veículo.<br/><br/>Certifique-se de acondicionar a bicicleta de forma segura e sem obstruir lugares ou portas. As bicicletas dobráveis são geralmente permitidas, mas podem ser recusadas em veículos lotados.</p>",
+				"title": "É permitido transportar bicicleta ou trotinete elétrica nos autocarros da Carris Metropolitana?"
+			},
+			{
+				"_id": "F10",
+				"body": "<p>Sim, nos veículos com compartimentos destinados a bagagens, é permitido levar bagagem de mão e objetos portáteis de uso pessoal gratuitamente, desde que seja possível a sua arrumação e o seu peso não exceda os 20 Kg por passageiro. Considera-se bagagem diversos itens, incluindo malas, cadeiras portáteis, carrinhos de bebé fechados, instrumentos de música e bicicletas dobráveis.</p><p>É importante lembrar que a quantidade de bagagens de mão, volumes e animais de companhia admitidos a bordo pode ser definida pelo Motorista ou pelo Agente de Fiscalização.</p>",
+				"title": "Posso transportar volumes na Carris Metropolitana?"
+			}
+		],
+		"title": "Informações ao passageiro"
+	}
+
+]

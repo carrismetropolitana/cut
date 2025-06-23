@@ -1,0 +1,52 @@
+/* * */
+/* MENU */
+
+.menuItem {
+	display: flex;
+	flex-direction: row;
+	gap: var(--size-spacing-15);
+	align-items: center;
+	justify-content: flex-start;
+	padding: var(--size-spacing-15);
+	font-size: var(--font-size-nav);
+	font-weight: var(--font-weight-nav);
+	border-top: 1px solid var(--color-system-border-100);
+}
+
+.menuItem:hover {
+	background-color: var(--color-system-background-300);
+}
+
+.menuLabel {
+	display: contents;
+}
+
+/* * */
+/* ICON */
+
+.icon {
+	display: flex;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
+
+/* * */
+/* LABEL */
+
+.label {
+	width: 100%;
+}
+
+
+/* * */
+/* ARROW INDICATOR */
+
+.arrowIndicator {
+	flex-grow: 0;
+	flex-shrink: 0;
+	color: var(--color-system-text-400);
+}
+
+.menuItem:hover .arrowIndicator {
+	color: var(--color-system-text-300);
+}

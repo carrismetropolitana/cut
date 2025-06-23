@@ -1,0 +1,12 @@
+/* * */
+/* TOGGLE */
+
+.toggle {
+	cursor: pointer;
+	user-select: none;
+	-webkit-touch-callout: none;
+}
+
+.enabled.toggle {
+  color: var(--color-debug);
+}

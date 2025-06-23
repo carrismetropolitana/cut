@@ -1,0 +1,120 @@
+
+/* CARD WRAPPER */
+.cardMainWrapper {
+	 display: flex;
+	flex: 1;
+	flex-direction: column;
+	align-items: stretch;
+	height: 88%;
+	padding: 20px;
+	text-align: center;
+	background-color: var(--color-system-background-100);
+	border: 1px solid var(--color-system-border-200);
+	border-radius: 20px;
+	box-shadow: 0 -4px 0 rgb(0 0 0 / 5%);
+  }
+
+/* * */
+/* CARD WRAPPER SHADOW */
+.cardMainWrapperShadow{
+	box-sizing: border-box;
+	width: 100%;
+    height: 100px;
+	padding: 0;
+	margin-bottom: -50px;
+    background-color: var(--color-brand);  
+	border: 1px solid var(--color-system-border-200);  
+    border-top-left-radius: 20px;  
+    border-top-right-radius: 20px;
+}
+
+/* * */
+/* Header Title */
+.headerTitle {
+	padding: 10px;
+	font-size: 18px;
+	font-weight: var(--font-weight-bold);
+	color: var(--color-primary-black);
+	text-align: center;
+}
+
+/* * */
+/* SUBHEADING */
+.subheading{
+	margin-bottom: 20px;
+	font-size: 16px;
+	font-weight: var(--font-weight-bold);
+	color: var(--color-system-text-200);
+}
+
+/* * */
+/* BODY CONTENT */
+.cardBody{
+	margin: 0 auto;
+}
+
+.bodyValue1{
+	font-size: 50px;
+	font-weight: var(--font-weight-bold);
+	color: var(--color-system-text-200)
+}
+
+.bodyDescription1{
+	font-size: 16px;
+	font-weight: var(--font-weight-medium);
+	color: var(--color-system-text-200)
+}
+
+.bodyDescription2{
+	font-size: 26px;
+	font-weight: var(--font-weight-bold);
+	color: var(--color-system-text-200)
+}
+
+.bodyDescription3{
+	font-size: 12px;
+	font-weight: var(--font-weight-semibold);
+	color: var(--color-system-text-200)
+}
+
+/* * */
+/* CARD FOOTER */
+.cardFooter{
+	margin-top: 20px;
+}
+
+/* * */
+/* FOOTER NOTES */
+.footerNotes{
+	font-size: 11px;
+	font-weight: var(--font-weight-medium);
+	color: var(--color-system-text-200);
+}
+
+/* * */
+/* INNER  BODY CARD */
+.cardBodyInnerCard{
+	padding: 20px;
+	margin-top:20px;
+	text-align: center;
+	background-color: var(--color-system-background-200);
+	border-radius: 20px;
+}
+
+/* * */
+/* LINE BADGE */
+.lineBadge{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+/* * */
+/* TOTAL TO TEXT */
+.totalToText{
+	margin-bottom: 20px;
+	font-size: 14px;
+	font-weight: var(--font-weight-medium);
+	color: var(--color-system-text-200);
+}

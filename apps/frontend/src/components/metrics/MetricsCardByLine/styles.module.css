@@ -1,0 +1,121 @@
+/* * */
+/* CONTAINER */
+
+.container {
+	overflow: hidden;
+	width: 100%;
+	border-radius: var(--border-radius-lg);
+	background-color: var(--color-primary-black);
+	box-shadow: var(--box-shadow-lg);
+	position: relative;
+	color: var(--color-system-text-300);
+}
+
+/* * */
+/* METRICS WRAPPER */
+
+.metricsWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-spacing-15);
+	padding: var(--size-spacing-20);
+	z-index: 2;
+}
+
+/* * */
+/* ROW WRAPPER */
+
+.rowWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-spacing-5);
+}
+
+/* * */
+/* REALTIME VALUE WRAPPER */
+
+.realtimeValueWrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: var(--size-spacing-20);
+}
+
+/* * */
+/* REALTIME VALUE WRAPPER ITEM */
+
+.realtimeValueWrapperItem {
+	opacity: 0.4;
+	cursor: pointer;
+	transition: opacity 300ms ease;
+}
+
+.realtimeValueWrapperItem.selected {
+	opacity: 1;
+}
+
+/* * */
+/* VALUE */
+
+.value {
+	line-height: 1;
+	font-weight: var(--font-weight-extrabold);
+}
+
+.primary .value {
+	font-size: 30px;
+}
+
+.secondary .value {
+	font-size: 20px;
+}
+
+/* * */
+/* LABEL */
+
+.label {
+	margin-top: var(--size-spacing-10);
+	color: var(--color-primary-white);
+	opacity: 0.7;
+	font-size: 16px;
+	font-weight: var(--font-weight-bold);
+}
+
+.description {
+	color: var(--color-primary-white);
+	opacity: 0.7;
+	font-size: 16px;
+	font-weight: var(--font-weight-medium);
+}
+
+
+
+/* * */
+/* GRAPH WRAPPER */
+
+.graphWrapper {
+	width: 100%;
+	z-index: 1;
+	padding: var(--size-spacing-10) 0;
+}
+
+
+/* * */
+/* SUMMARY */
+
+.summaryWrapper {
+	display: flex;
+	flex-direction: column;
+	padding: var(--size-spacing-15);
+	border-radius: var(--border-radius-lg);
+}
+
+.summaryValue {
+	font-size: 20px;
+	font-weight: var(--font-weight-bold);
+}
+
+.summaryDescription {
+	font-size: 16px;
+	font-weight: var(--font-weight-semibold);
+}
