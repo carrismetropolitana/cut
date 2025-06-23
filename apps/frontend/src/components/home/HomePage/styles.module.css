@@ -1,6 +1,29 @@
 /* * */
-/* CAROUSEL WRAPPER */
+/* CONTAINER */
 
-.carouselWrapper {
-	aspect-ratio: 16/9;
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 500px;
+}
+
+/* * */
+/* TITLE & SUBTITLE */
+
+.title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 30px;
+	font-weight: 700;
+	color: var(--color-system-text-200);
+	text-align: center;
+}
+
+.subtitle {
+	font-weight: 400;
 }
