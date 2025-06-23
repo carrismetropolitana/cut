@@ -67,8 +67,6 @@ export function SibsWidget() {
 	//
 	// D. Render components
 
-	console.log(authToken);
-
 	if (!authToken) {
 		return <Loader />;
 	}
