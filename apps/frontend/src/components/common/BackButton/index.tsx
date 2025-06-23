@@ -2,7 +2,6 @@
 
 /* * */
 
-import { useEnvironmentContext } from '@/contexts/Environment.context';
 import { IconArrowLeft } from '@tabler/icons-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
@@ -28,7 +27,6 @@ export function BackButton({ href, keepEnvironment = true }: Props) {
 
 	const router = useRouter();
 	const t = useTranslations('common.BackButton');
-	const environmentContext = useEnvironmentContext();
 
 	//
 	// B. Transform data
@@ -38,8 +36,6 @@ export function BackButton({ href, keepEnvironment = true }: Props) {
 		if (!href) return;
 		// Return only href if keepEnvironment is false
 		if (!keepEnvironment) return href;
-		// Request a normalized href that includes the current environment
-		return environmentContext.actions.getNormalizedHref(href);
 		//
 	}, [href, keepEnvironment]);
 

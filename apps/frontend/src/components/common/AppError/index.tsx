@@ -21,6 +21,8 @@ export function AppError({ error }) {
 
 	const [reloadInSeconds, setReloadInSeconds] = useState(30);
 
+	console.error('AppError:', error);
+
 	//
 	// B. Transform data
 
