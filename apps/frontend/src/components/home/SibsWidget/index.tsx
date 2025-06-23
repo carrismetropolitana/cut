@@ -67,17 +67,22 @@ export function SibsWidget() {
 	//
 	// D. Render components
 
+	console.log(authToken);
+
+	if (!authToken) {
+		return <Loader />;
+	}
+
 	return (
 		<>
 
-			<Script id="inject-sibs-auth-token-value" strategy="beforeInteractive">
+			<Script id="inject-sibs-auth-token-value">
 				{`var sibsWidgetAuthToken = '${authToken}';`}
 			</Script>
 
 			<Script
 				onLoad={() => setIsLoaded(true)}
 				src="https://form.sibsgateway.com/assets/js/masstransit_widget.js"
-				strategy="afterInteractive"
 			/>
 
 			{!isLoaded && <Loader />}
