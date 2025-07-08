@@ -3,13 +3,16 @@
 	"private": true,
 	"scripts": {
 		"build": "turbo build",
+		"build:api": "turbo build --filter=@carrismetropolitana/cut-api",
 		"build:frontend": "turbo build --filter=@carrismetropolitana/cut-frontend",
 		"dev": "dotenv-run -f ./environments/development/secrets/.env -- turbo dev",
 		"dev:frontend": "dotenv-run -f ./environments/development/secrets/.env -- turbo dev --filter=@carrismetropolitana/cut-frontend",
 		"lint": "turbo lint",
 		"lint-fix": "turbo lint-fix",
+		"lint:api": "turbo lint --filter=@carrismetropolitana/cut-api",
 		"lint:frontend": "turbo lint --filter=@carrismetropolitana/cut-frontend",
 		"purge": "sh purge.sh",
+		"rinse": "npx --yes @tmlmobilidade/repo-rinse",
 		"start": "turbo start"
 	},
 	"devDependencies": {

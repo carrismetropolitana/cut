@@ -30,7 +30,7 @@ export function SibsWidget() {
 	useEffect(() => {
 		(async () => {
 			// Fetch the SIBS token from the API
-			const response = await fetch('/api/sibs-token');
+			const response = await fetch('/api/sibs/token');
 			if (!response.ok) throw new Error('Failed to fetch SIBS token');
 			const data = await response.json();
 			setAuthToken(data.auth_token);
