@@ -3,6 +3,7 @@
 /* * */
 
 import { type FareEngineCharge } from '@carrismetropolitana/cut-pckg-types';
+import { IconCircleCheckFilled } from '@tabler/icons-react';
 import { Dates } from '@tmlmobilidade/utils';
 import { useMemo } from 'react';
 
@@ -43,6 +44,7 @@ export function ChargesListItemHeader({ data }: ChargesListItemHeaderProps) {
 				<span className={styles.chargeId}>{data.charge_id}</span>
 			</div>
 			<div className={styles.rightSection}>
+				<IconCircleCheckFilled />
 				<span className={styles.status} data-status="ok">{data.status}</span>
 				<div className={styles.amount} data-status="paid">{parsedAmount}</div>
 			</div>

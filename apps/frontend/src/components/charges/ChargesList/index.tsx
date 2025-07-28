@@ -31,6 +31,8 @@ export function ChargesList() {
 				))}
 			</div>
 
+			<p className={styles.tokenInfo}>O identificador do seu cartão é <span className={styles.tokenValue}>{tokenContext.data.token}</span></p>
+
 		</div>
 	);
 

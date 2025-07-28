@@ -41,7 +41,7 @@ export function ChargesListItemTaps({ taps }: ChargesListItemTapsProps) {
 			const lineData = allLinesData.find(line => line.id === tapData.ticketing.line);
 			const stopData = allStopsData.find(stop => stop.id === tapData.ticketing.stop);
 			// Parse the tap timestamp
-			const parsedTimestamp = Dates.fromISO(tapData.timestamp).toFormat('dd/mm/yyyy - HH:mm');
+			const parsedTimestamp = Dates.fromISO(tapData.timestamp).toFormat('dd/LL/yyyy - HH:mm');
 			// If there are charges, fill the table with data
 			table.body.push([
 				<LineBadge data={lineData} />,
