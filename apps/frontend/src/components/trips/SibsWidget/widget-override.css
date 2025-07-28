@@ -1,0 +1,41 @@
+/* stylelint-disable selector-id-pattern */
+
+/* * */
+/* CONTAINER */
+
+#sibs-widget-container {
+	background-color: transparent !important;
+}
+
+/* * */
+/* FORM */
+
+#sibs-widget-container form#card-form #card-label {
+	display: none;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+#sibs-widget-container form#card-form input#card-input,
+#sibs-widget-container form#card-form input#exp-date-input {
+	width: 100%;
+	max-width: none;
+	padding: 10px;
+	font-size: 24px;
+	color: var(--color-system-text-100);
+	background-color: var(--color-system-background-100);
+	border: 2px solid var(--color-system-border-200);
+	border-radius: 5px;
+}
+
+#sibs-widget-container form#card-form input#card-input::placeholder,
+#sibs-widget-container form#card-form input#exp-date-input::placeholder {
+	color: var(--color-system-text-300);
+}
+
+#sibs-widget-container form#card-form button {
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--color-primary-black);
+	background-color: var(--color-brand);
+}

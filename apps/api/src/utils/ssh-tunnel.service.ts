@@ -74,6 +74,8 @@ export class SshTunnelService {
 			server.on('close', () => {
 				console.log(`⤷ SSH Tunnel closed.`);
 			});
+
+			return this._server;
 		}
 		catch (error) {
 			if (error.code === 'EADDRINUSE') {

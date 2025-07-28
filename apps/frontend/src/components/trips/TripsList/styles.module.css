@@ -1,0 +1,28 @@
+/* * */
+/* CONTAINER */
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+}
+
+/* * */
+/* TITLE & SUBTITLE */
+
+.title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 30px;
+	font-weight: 700;
+	color: var(--color-system-text-200);
+	text-align: center;
+}
+
+.subtitle {
+	font-weight: 400;
+}

@@ -1,6 +1,7 @@
 /* * */
 
 import { Viewport } from '@/components/viewport/Viewport';
+import { TokenContextProvider } from '@/contexts/Token.context';
 import { ConfigProviders } from '@/providers/config-providers';
 import { RootProviders } from '@/providers/root-providers';
 import { ThemeProviders } from '@/providers/theme-providers';
@@ -16,10 +17,12 @@ export default function Layout({ children }) {
 			<RootProviders>
 				<ConfigProviders>
 					<ThemeProviders themeData={defaultTheme} themeId="website">
-						<Notifications styles={{ root: { marginTop: '60px' } }} />
-						<Viewport>
-							{children}
-						</Viewport>
+						<TokenContextProvider>
+							<Notifications styles={{ root: { marginTop: '60px' } }} />
+							<Viewport>
+								{children}
+							</Viewport>
+						</TokenContextProvider>
 					</ThemeProviders>
 				</ConfigProviders>
 			</RootProviders>
