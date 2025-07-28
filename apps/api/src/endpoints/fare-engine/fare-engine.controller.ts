@@ -1,14 +1,14 @@
 /* * */
 
 import { getFareEngineUrl } from '@/utils/get-fare-engine-url';
-import { type FareEngineTapsResponse } from '@carrismetropolitana/cut-pckg-types';
+import { type FareEngineChargesResponse } from '@carrismetropolitana/cut-pckg-types';
 import { type FastifyReply, type FastifyRequest } from '@tmlmobilidade/connectors';
 import { HttpStatus } from '@tmlmobilidade/lib';
 
 /* * */
 
 export class FareEngineController {
-	static async getToken(request: FastifyRequest, reply: FastifyReply<FareEngineTapsResponse>) {
+	static async getToken(request: FastifyRequest, reply: FastifyReply<FareEngineChargesResponse>) {
 		try {
 			//
 
@@ -23,7 +23,7 @@ export class FareEngineController {
 
 			const cardToken = request.params['token'] as string;
 
-			const fetchUrl = `${fareEngineUrl}/passenger/cards/${cardToken}/taps`;
+			const fetchUrl = `${fareEngineUrl}/passenger/cards/${cardToken}/charges`;
 
 			console.log('Fare Engine API URL:', fetchUrl);
 
@@ -36,7 +36,12 @@ export class FareEngineController {
 				},
 			});
 
-			const responseData = await response.json() as FareEngineTapsResponse;
+			// const responseText = await response.json();
+			// console.log('Fare Engine API Response Text:', responseText);
+
+			const responseData = await response.json() as FareEngineChargesResponse;
+
+			console.log('Fare Engine API Response:', responseData);
 
 			//
 			// Send the response back to the client

@@ -23,6 +23,22 @@ export interface FareEngineTap {
 
 /* * */
 
+export interface FareEngineCharge {
+	amount: number
+	card_token: string
+	charge_id: string
+	clearing_timestamp: string
+	currency: 'EUR'
+	// documents: null
+	record_no: number
+	// refunds: null
+	request_timestamp: string
+	status: 'cleared'
+	taps: FareEngineTap[]
+}
+
+/* * */
+
 export interface FareEngineResponseInfo {
 	page_no: number
 	page_size: number
@@ -31,7 +47,7 @@ export interface FareEngineResponseInfo {
 	total_count: number
 }
 
-export interface FareEngineTapsResponse {
+export interface FareEngineChargesResponse {
+	charges: FareEngineCharge[]
 	response_info: FareEngineResponseInfo
-	taps: FareEngineTap[]
 }

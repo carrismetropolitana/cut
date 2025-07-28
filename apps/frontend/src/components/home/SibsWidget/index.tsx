@@ -61,7 +61,7 @@ export function SibsWidget() {
 			// to the Token context so that it can be used later
 			const customEvent = e as CustomEvent<{ token: string }>;
 			if (!customEvent.detail || !customEvent.detail.token) return;
-			router.push(`/trips/${customEvent.detail.token}`);
+			router.push(`/charges/${customEvent.detail.token}`);
 		};
 		// Listen for the custom event from the SIBS widget
 		document.addEventListener('sibsTokenInfo', handler);

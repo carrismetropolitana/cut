@@ -1,0 +1,30 @@
+/* * */
+/* BADGE */
+
+.root {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+/* * */
+/* METADATA */
+
+.name {
+	font-size: 16px;
+	font-weight: var(--font-weight-semibold);
+	color: var(--color-system-text-100);
+}
+
+.id {
+	font-size: 12px;
+	font-weight: var(--font-weight-semibold);
+	color: var(--color-system-text-300);
+}
+
+.location {
+	font-size: 12px;
+	font-weight: var(--font-weight-medium);
+	line-height: 1;
+	color: var(--color-system-text-300);
+}

@@ -62,6 +62,12 @@ export class SshTunnelService {
      */
 	async connect() {
 		try {
+			if (this._server) {
+				// If the server is already connected, return it
+				console.log(`⤷ SSH Tunnel already connected.`);
+				return this._server;
+			}
+
 			const [server] = await createTunnel(this.config.tunnelOptions, this.config.serverOptions, this.config.sshOptions, this.config.forwardOptions);
 			console.log(`⤷ SSH Tunnel connected to host port ${(server.address() as AddressInfo).port}`);
 
