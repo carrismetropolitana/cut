@@ -4,6 +4,7 @@
 
 import { Loader } from '@/components/common/Loader';
 import { useLocaleContext } from '@/contexts/Locale.context';
+import { HttpResponse } from '@tmlmobilidade/utils';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
 import Script from 'next/script';
@@ -34,8 +35,8 @@ export function SibsWidget() {
 			// Fetch the SIBS token from the API
 			const response = await fetch('/api/sibs/token');
 			if (!response.ok) throw new Error('Failed to fetch SIBS token');
-			const data = await response.json();
-			setAuthToken(data.auth_token);
+			const responseData: HttpResponse<{ auth_token: string }> = await response.json();
+			setAuthToken(responseData.data.auth_token);
 		})();
 	}, []);
 

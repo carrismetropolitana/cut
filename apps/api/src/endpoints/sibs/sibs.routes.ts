@@ -1,8 +1,7 @@
 /* * */
 
 import { SibsController } from '@/endpoints/sibs/sibs.controller';
-import { FastifyService } from '@tmlmobilidade/connectors';
-import { FastifyInstance } from 'fastify';
+import { type FastifyInstance, FastifyService } from '@tmlmobilidade/connectors';
 
 /* * */
 

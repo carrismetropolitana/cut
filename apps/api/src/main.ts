@@ -9,6 +9,15 @@ import { FastifyService, type FastifyServiceOptions } from '@tmlmobilidade/conne
 
 	const options: FastifyServiceOptions = {
 		ignoreTrailingSlash: true,
+		logger: {
+			level: 'debug',
+			transport: {
+				options: {
+					colorize: true,
+				},
+				target: 'pino-pretty',
+			},
+		},
 		origin: true,
 		port: 49011,
 	};

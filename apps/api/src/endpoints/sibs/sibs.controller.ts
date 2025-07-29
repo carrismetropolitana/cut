@@ -1,7 +1,7 @@
 /* * */
 
 import { type FastifyReply, type FastifyRequest } from '@tmlmobilidade/connectors';
-import { HttpStatus } from '@tmlmobilidade/lib';
+import { HttpException, HttpStatus } from '@tmlmobilidade/lib';
 
 /* * */
 
@@ -17,20 +17,20 @@ interface SibsTokenResponse {
 /* * */
 
 export class SibsController {
-	static async getToken(request: FastifyRequest, reply: FastifyReply) {
+	static async getToken(request: FastifyRequest, reply: FastifyReply<{ auth_token: string }>) {
+		//
+
+		//
+		// Validate environment variables
+
+		if (!process.env.SIBS_TOKEN_ENDPOINT || !process.env.IBM_CLIENT_ID || !process.env.SIBS_SECRET_INDEX) {
+			throw new HttpException(HttpStatus.BAD_REQUEST, 'Missing required environment variables');
+		}
+
+		//
+		// Fetch the SIBS token from the API
+
 		try {
-			//
-
-			//
-			// Validate environment variables
-
-			if (!process.env.SIBS_TOKEN_ENDPOINT || !process.env.IBM_CLIENT_ID || !process.env.SIBS_SECRET_INDEX) {
-				return Response.json({ error: 'Missing required environment variables' }, { status: 500 });
-			}
-
-			//
-			// Fetch the SIBS token from the API
-
 			const response = await fetch(process.env.SIBS_TOKEN_ENDPOINT, {
 				headers: {
 					'Accept': 'application/json',
@@ -43,14 +43,19 @@ export class SibsController {
 
 			const responseData = await response.json() as SibsTokenResponse;
 
-			return reply.send({ auth_token: responseData.authToken });
+			console.log('SIBS Token Response:', responseData);
 
-			//
+			reply.send({
+				data: { auth_token: responseData.authToken },
+				error: null,
+				statusCode: HttpStatus.OK,
+			});
 		}
 		catch (error) {
-			reply
-				.status(error.statusCode ?? HttpStatus.INTERNAL_SERVER_ERROR)
-				.send(error);
+			console.log('Error fetching SIBS token:', error);
+			throw new HttpException(HttpStatus.INTERNAL_SERVER_ERROR, error.cause || 'Failed to fetch SIBS token');
 		}
+
+		//
 	}
 }
