@@ -33,7 +33,7 @@ export interface FareEngineCharge {
 	record_no: number
 	// refunds: null
 	request_timestamp: string
-	status: 'cleared'
+	status: 'cleared' | 'cleared_forced' | 'not_cleared'
 	taps: FareEngineTap[]
 }
 

@@ -3,11 +3,12 @@
 /* * */
 
 import { type FareEngineCharge } from '@carrismetropolitana/cut-pckg-types';
-import { IconCircleCheckFilled } from '@tabler/icons-react';
 import { Dates } from '@tmlmobilidade/utils';
 import { useMemo } from 'react';
 
 import styles from './styles.module.css';
+
+import { ChargeAmountStatus } from '../ChargeAmountStatus';
 
 /* * */
 
@@ -29,11 +30,6 @@ export function ChargesListItemHeader({ data }: ChargesListItemHeaderProps) {
 		return Array.from(uniqueDates).join(', ');
 	}, [data.request_timestamp]);
 
-	const parsedAmount = useMemo(() => {
-		const value = (data.amount / 100).toFixed(2);
-		return `€ ${value}`;
-	}, [data.amount]);
-
 	//
 	// B. Render components
 
@@ -44,9 +40,7 @@ export function ChargesListItemHeader({ data }: ChargesListItemHeaderProps) {
 				<span className={styles.chargeId}>{data.charge_id}</span>
 			</div>
 			<div className={styles.rightSection}>
-				<IconCircleCheckFilled />
-				<span className={styles.status} data-status="ok">{data.status}</span>
-				<div className={styles.amount} data-status="paid">{parsedAmount}</div>
+				<ChargeAmountStatus amount={data.amount} status={data.status} />
 			</div>
 		</div>
 	);

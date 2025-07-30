@@ -41,16 +41,3 @@
 	font-weight: var(--font-weight-semibold);
 	color: var(--color-system-text-400);
 }
-
-/* * */
-/* AMOUNT */
-
-.amount {
-	padding: 6px;
-	font-size: 24px;
-	font-weight: var(--font-weight-bold);
-	line-height: 1;
-	color: white;
-	background-color: var(--color-status-ok-text);
-	border-radius: 5px;
-}

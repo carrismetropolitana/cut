@@ -1,0 +1,51 @@
+/* * */
+/* ROOT */
+
+.root {
+	display: flex;
+	flex-direction: row;
+	gap: 5px;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+/* * */
+/* ICON */
+
+.root[data-status='cleared'] .icon {
+	color: var(--color-status-ok-text);
+}
+
+.root[data-status='cleared_forced'] .icon {
+	color: var(--color-status-ok-text);
+}
+
+.root[data-status='not_cleared'] .icon {
+	color: var(--color-status-danger-text);
+}
+
+/* * */
+/* AMOUNT */
+
+.amount {
+	padding: 6px;
+	font-size: 24px;
+	font-weight: var(--font-weight-bold);
+	line-height: 1;
+	border-radius: 5px;
+}
+
+.root[data-status='cleared'] .amount {
+	color: white;
+	background-color: var(--color-status-ok-text);
+}
+
+.root[data-status='cleared_forced'] .amount {
+	color: white;
+	background-color: var(--color-status-ok-text);
+}
+
+.root[data-status='not_cleared'] .amount {
+	color: white;
+	background-color: var(--color-status-danger-text);
+}
