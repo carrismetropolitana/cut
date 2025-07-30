@@ -12,8 +12,13 @@ const namespace = '/fare-engine';
 
 server.register(
 	(instance, opts, next) => {
-		// GET /fare-engine/:token
-		instance.get('/:token', FareEngineController.getToken);
+		//
+
+		// GET /fare-engine/:token/taps
+		instance.get('/:token/taps', FareEngineController.getTaps);
+
+		// GET /fare-engine/:token/charges
+		instance.get('/:token/charges', FareEngineController.getCharges);
 
 		next();
 	},

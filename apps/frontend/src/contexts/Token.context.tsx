@@ -2,7 +2,7 @@
 
 /* * */
 
-import { type FareEngineCharge, type FareEngineChargesResponse } from '@carrismetropolitana/cut-pckg-types';
+import { type FareEngineCharge, type FareEngineChargesResponse, type FareEngineTap, type FareEngineTapsResponse } from '@carrismetropolitana/cut-pckg-types';
 import { type HttpResponse } from '@tmlmobilidade/utils';
 import { createContext, PropsWithChildren, useContext, useMemo } from 'react';
 import useSWR from 'swr';
@@ -13,6 +13,7 @@ interface TokenContextState {
 	data: {
 		charges: FareEngineCharge[]
 		token: string
+		ungrouped_taps: FareEngineTap[]
 	}
 	flags: {
 		error: Error | null
@@ -40,7 +41,8 @@ export const TokenContextProvider = ({ children, token }: PropsWithChildren<{ to
 	//
 	// B. Fetch data
 
-	const { data: allChargesResponse, error: allChargesError, isLoading: allChargesLoading } = useSWR<HttpResponse<FareEngineChargesResponse>>(token && `/api/fare-engine/${token}`);
+	const { data: allChargesResponse, error: allChargesError, isLoading: allChargesLoading } = useSWR<HttpResponse<FareEngineChargesResponse>>(token && `/api/fare-engine/${token}/charges`);
+	const { data: allTapsResponse, error: allTapsError, isLoading: allTapsLoading } = useSWR<HttpResponse<FareEngineTapsResponse>>(token && `/api/fare-engine/${token}/taps`);
 
 	//
 	// C. Transform data
@@ -62,6 +64,19 @@ export const TokenContextProvider = ({ children, token }: PropsWithChildren<{ to
 			});
 	}, [allChargesResponse]);
 
+	const allUngroupedTapsData = useMemo(() => {
+		// Exit early if no response or data
+		if (!allTapsResponse || !allTapsResponse.data?.taps) return [];
+		// Extract the taps from the response that are not
+		// present in any charge and sort them by record number.
+		const ungroupedTaps = allTapsResponse.data.taps
+			.sort((a, b) => a.record_no - b.record_no)
+			.filter(tap => !allChargesData.some(charge => charge.taps.some(chargeTap => chargeTap.tap_id === tap.tap_id)));
+		// Remove duplicate taps for the same journey
+		const uniqueUngroupedTaps = new Map(ungroupedTaps.map(tap => [tap.ticketing.journey, tap]));
+		return Array.from(uniqueUngroupedTaps.values());
+	}, [allTapsResponse, allChargesData]);
+
 	//
 	// D. Define context value
 
@@ -69,12 +84,13 @@ export const TokenContextProvider = ({ children, token }: PropsWithChildren<{ to
 		data: {
 			charges: allChargesData,
 			token: token,
+			ungrouped_taps: allUngroupedTapsData,
 		},
 		flags: {
-			error: allChargesError,
-			loading: allChargesLoading,
+			error: allChargesError || allTapsError || null,
+			loading: allChargesLoading || allTapsLoading,
 		},
-	}), [allChargesError, allChargesLoading]);
+	}), [token, allChargesData, allUngroupedTapsData, allChargesError, allChargesLoading, allTapsError, allTapsLoading]);
 
 	//
 	// E. Render components

@@ -47,6 +47,11 @@ export interface FareEngineResponseInfo {
 	total_count: number
 }
 
+export interface FareEngineTapsResponse {
+	response_info: FareEngineResponseInfo
+	taps: FareEngineTap[]
+}
+
 export interface FareEngineChargesResponse {
 	charges: FareEngineCharge[]
 	response_info: FareEngineResponseInfo

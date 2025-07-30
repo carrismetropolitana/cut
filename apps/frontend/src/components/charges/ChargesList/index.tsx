@@ -18,7 +18,7 @@ export function ChargesList() {
 	const tokenContext = useTokenContext();
 
 	//
-	// C. Render components
+	// B. Render components
 
 	return (
 		<div className={styles.root}>
