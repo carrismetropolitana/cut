@@ -23,13 +23,21 @@ export interface FareEngineTap {
 
 /* * */
 
+export interface FareEngineDocument {
+	amount: number
+	anonymous: boolean
+	ref: string
+}
+
+/* * */
+
 export interface FareEngineCharge {
 	amount: number
 	card_token: string
 	charge_id: string
 	clearing_timestamp: string
 	currency: 'EUR'
-	// documents: null
+	documents: FareEngineDocument[]
 	record_no: number
 	// refunds: null
 	request_timestamp: string

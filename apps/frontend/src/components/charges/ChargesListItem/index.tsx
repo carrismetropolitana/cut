@@ -33,7 +33,7 @@ export function ChargesListItem({ data }: ChargesListItemProps) {
 			<ChargesListItemHeader data={data} />
 			<ChargesListItemTaps taps={data.taps} />
 			<Divider />
-			<ChargesListItemDocs taps={data.taps} />
+			<ChargesListItemDocs documents={data.documents ?? []} />
 			<Divider />
 			<ChargesListItemSummary taps={data.taps} />
 		</div>

@@ -17,6 +17,8 @@ export function ChargesList() {
 
 	const tokenContext = useTokenContext();
 
+	console.log('ChargesList', tokenContext.data.charges);
+
 	//
 	// B. Render components
 

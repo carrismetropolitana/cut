@@ -5,7 +5,7 @@
 import { LineBadge } from '@/components/common/LineBadge';
 import { StopBadge } from '@/components/common/StopBadge';
 import { type Line, type Stop } from '@carrismetropolitana/api-types/network';
-import { type FareEngineTap } from '@carrismetropolitana/cut-pckg-types';
+import { type FareEngineCharge } from '@carrismetropolitana/cut-pckg-types';
 import { Table, type TableData } from '@mantine/core';
 import { Dates } from '@tmlmobilidade/utils';
 import { useMemo } from 'react';
@@ -16,7 +16,7 @@ import styles from './styles.module.css';
 /* * */
 
 interface ChargesListItemTapsProps {
-	taps: FareEngineTap[]
+	taps: FareEngineCharge['taps']
 }
 
 /* * */
@@ -24,8 +24,14 @@ interface ChargesListItemTapsProps {
 export function ChargesListItemTaps({ taps }: ChargesListItemTapsProps) {
 	//
 
+	//
+	// A. Fetch data
+
 	const { data: allLinesData } = useSWR<Line[]>('https://api.carrismetropolitana.pt/v2/lines');
 	const { data: allStopsData } = useSWR<Stop[]>('https://api.carrismetropolitana.pt/v2/stops');
+
+	//
+	// B. Transform data
 
 	const tableData: TableData = useMemo(() => {
 		// Setup an empty table with headers
@@ -51,6 +57,9 @@ export function ChargesListItemTaps({ taps }: ChargesListItemTapsProps) {
 		}
 		return table;
 	}, [taps, allLinesData, allStopsData]);
+
+	//
+	// C. Render components
 
 	return (
 		<div className={styles.root}>
