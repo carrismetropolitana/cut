@@ -8,6 +8,9 @@
 		},
 		"BackButton": {
 			"label": "Go Back"
+		},
+		"NoDataLabel": {
+			"default": "System Unavailable"
 		}
 	},
 	"home": {

@@ -20,7 +20,7 @@ export function NoDataLabel({ fill, text, withMinHeight }: NoDataLabelProps) {
 	//
 	// A. Setup variables
 
-	const t = useTranslations('layout.NoDataLabel');
+	const t = useTranslations('common.NoDataLabel');
 
 	//
 	// B. Render components

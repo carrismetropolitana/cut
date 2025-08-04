@@ -25,6 +25,9 @@
 			"hours": "h",
 			"minutes": "min"
 		},
+		"NoDataLabel": {
+			"default": "Sistema Indisponível"
+		},
 		"ScrollToTopButton": {
 			"label": "Início da Página"
 		},

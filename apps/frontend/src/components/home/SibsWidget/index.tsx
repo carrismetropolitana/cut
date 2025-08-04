@@ -3,13 +3,14 @@
 /* * */
 
 import { Loader } from '@/components/common/Loader';
+import { NoDataLabel } from '@/components/layout/NoDataLabel';
 import { useLocaleContext } from '@/contexts/Locale.context';
 import { HttpResponse } from '@tmlmobilidade/utils';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
-import Script from 'next/script';
 
 import './widget-override.css';
+import Script from 'next/script';
 import { useEffect, useState } from 'react';
 
 /* * */
@@ -24,7 +25,8 @@ export function SibsWidget() {
 	const localeContext = useLocaleContext();
 	const router = useRouter();
 
-	const [isLoaded, setIsLoaded] = useState(false);
+	const [isLoaded, setIsLoaded] = useState<boolean>(false);
+	const [isError, setIsError] = useState<null | string>(null);
 	const [authToken, setAuthToken] = useState<null | string>(null);
 
 	//
@@ -34,9 +36,14 @@ export function SibsWidget() {
 		(async () => {
 			// Fetch the SIBS token from the API
 			const response = await fetch('/api/sibs/token');
-			if (!response.ok) throw new Error('Failed to fetch SIBS token');
+			if (!response.ok) {
+				console.log('Failed to fetch SIBS token', response);
+				setIsError('Serviço da SIBS indisponível.');
+				return;
+			}
 			const responseData: HttpResponse<{ auth_token: string }> = await response.json();
 			setAuthToken(responseData.data.auth_token);
+			setIsError(null);
 		})();
 	}, []);
 
@@ -72,6 +79,10 @@ export function SibsWidget() {
 
 	//
 	// D. Render components
+
+	if (isError) {
+		return <NoDataLabel text={isError} />;
+	}
 
 	if (!authToken) {
 		return <Loader />;

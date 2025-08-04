@@ -17,8 +17,8 @@
 		"@mantine/modals": "8.2.2",
 		"@mantine/notifications": "8.2.2",
 		"@tabler/icons-react": "3.34.1",
-		"@tmlmobilidade/types": "20250730.1509.56",
-		"@tmlmobilidade/utils": "20250730.1509.56",
+		"@tmlmobilidade/types": "20250802.1646.27",
+		"@tmlmobilidade/utils": "20250802.1646.27",
 		"dayjs": "1.11.13",
 		"luxon": "3.7.1",
 		"next": "15.4.5",
@@ -34,21 +34,21 @@
 		"@carrismetropolitana/api-types": "20250730.1209.8",
 		"@carrismetropolitana/cut-pckg-types": "*",
 		"@carrismetropolitana/eslint": "20250622.1204.50",
-		"@tmlmobilidade/tsconfig": "20250730.1509.56",
+		"@tmlmobilidade/tsconfig": "20250802.1646.27",
 		"@types/geojson": "7946.0.16",
 		"@types/luxon": "3.7.1",
-		"@types/node": "24.1.0",
+		"@types/node": "24.2.0",
 		"@types/react": "19.1.9",
 		"@types/react-dom": "19.1.7",
 		"postcss": "8.5.6",
 		"postcss-preset-mantine": "1.18.0",
 		"postcss-simple-vars": "7.0.1",
-		"typescript": "5.8.3",
+		"typescript": "5.9.2",
 		"typescript-plugin-css-modules": "5.2.0"
 	},
 	"overrides": {
 		"react": "19.1.1",
 		"react-dom": "19.1.1"
 	},
-	"packageManager": "npm@11.5.1"
+	"packageManager": "npm@11.5.2"
 }
