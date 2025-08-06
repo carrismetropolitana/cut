@@ -8,10 +8,10 @@ import { useLocaleContext } from '@/contexts/Locale.context';
 import { HttpResponse } from '@tmlmobilidade/utils';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
-
-import './widget-override.css';
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
+
+import './widget-override.css';
 
 /* * */
 

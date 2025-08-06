@@ -13,8 +13,8 @@
 		"lint:fix": "eslint --fix ."
 	},
 	"devDependencies": {
-		"@tmlmobilidade/tsconfig": "20250802.1646.27",
-		"@tmlmobilidade/types": "20250802.1646.27",
+		"@tmlmobilidade/tsconfig": "20250805.1617.9",
+		"@tmlmobilidade/types": "20250805.1617.9",
 		"@types/node": "24.2.0",
 		"resolve-tspaths": "0.8.23",
 		"tsx": "4.20.3",
