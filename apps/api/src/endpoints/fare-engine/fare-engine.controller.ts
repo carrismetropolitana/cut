@@ -127,9 +127,7 @@ export class FareEngineController {
 
 		const response = await fetch(fetchUrl, {
 			body: JSON.stringify({
-				charges: [
-					'2c5ed967-32ca-4929-85c8-1b80f6caa0e1',
-				],
+				charges: [chargeId],
 				customer: {
 					billing_address: 'Lisboa',
 					email: 'info@tmlmobilidade.pt',
