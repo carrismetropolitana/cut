@@ -4,7 +4,6 @@
 
 import { ChargesListItemDocs } from '@/components/charges/ChargesListItemDocs';
 import { ChargesListItemHeader } from '@/components/charges/ChargesListItemHeader';
-import { ChargesListItemSummary } from '@/components/charges/ChargesListItemSummary';
 import { ChargesListItemTaps } from '@/components/charges/ChargesListItemTaps';
 import { type FareEngineCharge } from '@carrismetropolitana/cut-pckg-types';
 import { Divider } from '@mantine/core';
@@ -33,9 +32,7 @@ export function ChargesListItem({ data }: ChargesListItemProps) {
 			<ChargesListItemHeader data={data} />
 			<ChargesListItemTaps taps={data.taps} />
 			<Divider />
-			<ChargesListItemDocs documents={data.documents ?? []} />
-			<Divider />
-			<ChargesListItemSummary taps={data.taps} />
+			<ChargesListItemDocs chargeId={data.charge_id} documents={data.documents ?? []} />
 		</div>
 	);
 

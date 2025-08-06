@@ -90,7 +90,15 @@ export const TokenContextProvider = ({ children, token }: PropsWithChildren<{ to
 			error: allChargesError || allTapsError || null,
 			loading: allChargesLoading || allTapsLoading,
 		},
-	}), [token, allChargesData, allUngroupedTapsData, allChargesError, allChargesLoading, allTapsError, allTapsLoading]);
+	}), [
+		token,
+		allChargesData,
+		allUngroupedTapsData,
+		allChargesError,
+		allChargesLoading,
+		allTapsError,
+		allTapsLoading,
+	]);
 
 	//
 	// E. Render components

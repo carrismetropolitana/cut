@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 import styles from './styles.module.css';
 
-import MainImage from './main-image.png';
+import HeaderImage from './header.png';
 
 /* * */
 
@@ -23,7 +23,7 @@ export function HomePage() {
 
 	return (
 		<div className={styles.container}>
-			<Image alt="" className={styles.image} height={200} src={MainImage} width={200} priority />
+			<Image alt="" height={200} src={HeaderImage} width={200} priority />
 			<h1 className={styles.title}>
 				<span>{t('title')}</span>
 				<span className={styles.subtitle}>{t('subtitle')}</span>

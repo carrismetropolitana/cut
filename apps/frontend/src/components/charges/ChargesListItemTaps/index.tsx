@@ -11,8 +11,6 @@ import { Dates } from '@tmlmobilidade/utils';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 
-import styles from './styles.module.css';
-
 /* * */
 
 interface ChargesListItemTapsProps {
@@ -62,10 +60,7 @@ export function ChargesListItemTaps({ taps }: ChargesListItemTapsProps) {
 	// C. Render components
 
 	return (
-		<div className={styles.root}>
-			<h3 className={styles.title}>Viagens:</h3>
-			<Table data={tableData} highlightOnHover withTableBorder />
-		</div>
+		<Table data={tableData} highlightOnHover />
 	);
 
 	//

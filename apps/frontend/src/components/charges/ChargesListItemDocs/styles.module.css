@@ -14,10 +14,22 @@
 
 .title {
 	width: 100%;
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: var(--font-weight-bold);
 	color: var(--color-system-text-100);
 	text-transform: uppercase;
+}
+
+.updateLink {
+	margin-top: 10px;
+	font-size: 14px;
+	font-weight: var(--font-weight-semibold);
+	color: var(--color-system-text-200);
+	cursor: pointer;
+}
+
+.updateLink:hover {
+	text-decoration: underline;
 }
 
 /* * */
