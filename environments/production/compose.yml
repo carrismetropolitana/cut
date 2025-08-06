@@ -1,6 +1,6 @@
 # # #
 
-name: cmet-website-production
+name: cmet-cut-production
 
 volumes:
   websitedbdata:
@@ -23,21 +23,6 @@ services:
       - WATCHTOWER_INCLUDE_STOPPED=TRUE
       - WATCHTOWER_REVIVE_STOPPED=TRUE
       - WATCHTOWER_ROLLING_RESTART=TRUE
-
-  # # # # # # # # # # # # # # # # # # # # #
-  # # # # # # # # # # # # # # # # # # # # #
-
-  websitedb:
-    image: mongo
-    restart: unless-stopped
-    logging:
-      options:
-        max-size: '1m'
-        max-file: '1'
-    volumes:
-      - websitedbdata:/data/db
-    env_file:
-      - ./secrets/.env
 
   # # # # # # # # # # # # # # # # # # # # #
   # # # # # # # # # # # # # # # # # # # # #
@@ -74,10 +59,10 @@ services:
   # # # # # # # # # # # # # # # # # # # # #
   # # # # # # # # # # # # # # # # # # # # #
 
-  backoffice:
-    image: ghcr.io/carrismetropolitana/cut-backoffice:production
+  api:
+    image: ghcr.io/carrismetropolitana/cut-api:production
     restart: unless-stopped
-    mem_limit: 6g
+    mem_limit: 2g
     logging:
       options:
         max-size: '1m'
