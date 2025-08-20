@@ -13,9 +13,9 @@
 		"lint:fix": "eslint --fix ."
 	},
 	"devDependencies": {
-		"@tmlmobilidade/tsconfig": "20250805.1617.9",
-		"@tmlmobilidade/types": "20250805.1617.9",
-		"@types/node": "24.2.0",
+		"@tmlmobilidade/tsconfig": "20250807.1521.32",
+		"@tmlmobilidade/types": "20250807.1521.32",
+		"@types/node": "24.2.1",
 		"resolve-tspaths": "0.8.23",
 		"tsx": "4.20.3",
 		"typescript": "5.9.2"
