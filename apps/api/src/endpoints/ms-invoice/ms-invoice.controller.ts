@@ -1,61 +1,47 @@
 /* * */
 
+import { getMsInvoiceUrl } from '@/utils/get-ms-invoice-url';
 import { type FastifyReply, type FastifyRequest } from '@tmlmobilidade/connectors';
-import { HttpException, HttpStatus } from '@tmlmobilidade/lib';
-
-/* * */
-
-interface MsInvoiceTokenResponse {
-	authToken: string
-	returnStatus: {
-		statusCode: string
-		statusDescription: string
-		statusMsg: string
-	}
-}
 
 /* * */
 
 export class MsInvoiceController {
-	static async getInvoicePdf(request: FastifyRequest, reply: FastifyReply<{ auth_token: string }>) {
+	//
+
+	static async getInvoicePdf(request: FastifyRequest<{ Params: { ref: string } }>, reply: FastifyReply<Buffer>) {
 		//
 
 		//
-		// Validate environment variables
+		// Get the correct URL for the MS Invoice API
 
-		if (!process.env.SIBS_TOKEN_ENDPOINT || !process.env.IBM_CLIENT_ID || !process.env.SIBS_SECRET_INDEX) {
-			throw new HttpException(HttpStatus.BAD_REQUEST, 'Missing required environment variables');
-		}
+		const msInvoiceUrl = await getMsInvoiceUrl();
 
 		//
-		// Fetch the SIBS token from the API
+		// Extract the document ref from the request parameters
+		// and setup the correct fetch URL
 
-		try {
-			const response = await fetch(process.env.SIBS_TOKEN_ENDPOINT, {
-				headers: {
-					'Accept': 'application/json',
-					'Content-Type': 'application/json',
-					'X-IBM-Client-ID': process.env.IBM_CLIENT_ID,
-					'X-SIBS-Secret-Index': process.env.SIBS_SECRET_INDEX,
-				},
-				method: 'GET',
-			});
+		const documentRef = request.params['ref'] as string;
 
-			const responseData = await response.json() as MsInvoiceTokenResponse;
+		const fetchUrl = `${msInvoiceUrl}/ticketingbackoffice/invoices/${documentRef}?layout=DefaultReceipt8`;
 
-			console.log('SIBS Token Response:', responseData);
+		//
+		// Fetch the MS Invoice API with the document ref
 
-			reply.send({
-				data: { auth_token: responseData.authToken },
-				error: null,
-				statusCode: HttpStatus.OK,
-			});
-		}
-		catch (error) {
-			console.log('Error fetching SIBS token:', error);
-			throw new HttpException(HttpStatus.INTERNAL_SERVER_ERROR, error.cause || 'Failed to fetch SIBS token');
-		}
+		const response = await fetch(fetchUrl, { headers: { Accept: 'application/pdf' } });
+
+		const responseData = await response.text();
+
+		// Decode from base64 and send a buffer to the client
+
+		const bufferData = Buffer.from(responseData, 'base64');
+
+		return reply
+			.header('Content-Type', 'application/pdf')
+			.header('content-disposition', `inline; filename="${documentRef}.pdf"`)
+			.send(bufferData);
 
 		//
 	}
+
+	//
 }

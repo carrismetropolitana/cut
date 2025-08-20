@@ -29,6 +29,12 @@ export interface FareEngineDocument {
 	ref: string
 }
 
+export interface FareEngineDocumentParsed extends FareEngineDocument {
+	amount_display: string
+	doc_id: string
+	doc_type: 'creditNotes' | 'invoices'
+}
+
 /* * */
 
 export interface FareEngineCharge {

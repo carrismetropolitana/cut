@@ -1,4 +1,34 @@
 {
+	"charges": {
+		"ChargesListItemDocs": {
+			"table": {
+				"header": {
+					"amount": "Valor",
+					"doc_id": "Nº Documento",
+					"doc_type": "Tipo",
+					"file": "Ficheiro"
+				},
+				"rows": {
+					"doc_type": {
+						"creditNotes": "Nota de Crédito",
+						"invoices": "Fatura"
+					},
+					"file": "Abrir PDF"
+				}
+			}
+		},
+		"SibsWidget": {
+			"card_input": {
+				"placeholder": "Número do Cartão"
+			},
+			"exp_date_input": {
+				"placeholder": "MM / DD"
+			},
+			"submit_button": {
+				"text": "Consultar Viagens"
+			}
+		}
+	},
 	"common": {
 		"AppError": {
 			"goto_home": "Voltar à página principal",

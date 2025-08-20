@@ -97,7 +97,7 @@ export class FareEngineController {
 	 * It constructs the URL based on the Fare Engine API base URL, card token, and charge ID.
 	 * It then sends a POST request to update the charge and returns the response.
 	 */
-	static async updateCharge(request: FastifyRequest, reply: FastifyReply<string>) {
+	static async updateCharge(request: FastifyRequest<{ Body: { billing_address: string, email: string, name: string, tax_id: string }, Params: { charge_id: string, token: string } }>, reply: FastifyReply<string>) {
 		//
 
 		//
@@ -120,7 +120,10 @@ export class FareEngineController {
 		const chargeId = request.params['charge_id'] as string;
 		if (!chargeId) throw new Error('Charge ID is required');
 
-		// const customerDetails = request.body as Record<string, any>;
+		//
+		// Validate the customer details
+
+		const validatedCustomerDetails = request.body;
 
 		//
 		// Fetch the Fare Engine API with the card token
@@ -129,10 +132,10 @@ export class FareEngineController {
 			body: JSON.stringify({
 				charges: [chargeId],
 				customer: {
-					billing_address: 'Lisboa',
-					email: 'info@tmlmobilidade.pt',
-					name: 'TML',
-					tax_id: '516150359',
+					billing_address: validatedCustomerDetails.billing_address ?? '',
+					email: validatedCustomerDetails.email ?? '',
+					name: validatedCustomerDetails.name ?? '',
+					tax_id: validatedCustomerDetails.tax_id ?? '',
 				},
 			}),
 			headers: {

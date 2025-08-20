@@ -5,9 +5,11 @@
 import { Grid } from '@/components/layout/Grid';
 import { NoDataLabel } from '@/components/layout/NoDataLabel';
 import { useTokenContext } from '@/contexts/Token.context';
+import { parseFareEngineDocument } from '@/utils/parse-fare-engine-document';
 import { type FareEngineCharge } from '@carrismetropolitana/cut-pckg-types';
 import { Button, Table, TableData, TextInput } from '@mantine/core';
 import { useForm } from '@mantine/form';
+import { useTranslations } from 'next-intl';
 import { useMemo, useState } from 'react';
 
 import styles from './styles.module.css';
@@ -27,52 +29,41 @@ export function ChargesListItemDocs({ chargeId, documents }: ChargesListItemDocs
 	//
 	// A. Setup variables
 
+	const t = useTranslations('charges.ChargesListItemDocs');
+
 	const tokenContext = useTokenContext();
 
 	const [isVisible, setIsVisible] = useState(false);
 
 	//
-	// A. Transform data
+	// B. Transform data
 
 	const tableData: TableData = useMemo(() => {
 		// Setup an empty table with headers
 		const table: TableData = {
 			body: [],
-			head: ['Nº Documento', 'Tipo', 'Valor', 'Ficheiro'],
+			head: [t('table.header.doc_id'), t('table.header.doc_type'), t('table.header.amount'), t('table.header.file')],
 		};
 		// If there are no documents, return the empty table
 		if (!documents) return table;
 		// Loop through the documents and fill the table with data
 
-		table.body = documents.map((doc) => {
-			const docType = doc.ref ? doc.ref.split('/')[0] : 'Desconhecido';
-			const docId = doc.ref ? doc.ref.split('/').pop() : 'Desconhecido';
-			const parsedAmount = doc.amount ? `€ ${(doc.amount / 100).toFixed(2)}` : 'N/A';
-			return [
-				docId,
-				docType,
-				parsedAmount,
-				'descarregar',
-			];
-		});
+		table.body = documents
+			.map(doc => parseFareEngineDocument(doc))
+			.filter(doc => !!doc)
+			.map((doc) => {
+				return [
+					doc.doc_id,
+					t(`table.rows.doc_type.${doc.doc_type}`),
+					doc.amount_display,
+					<a href={`/api/ms-invoice/${doc.doc_id}/pdf`} target="_blank">Abrir PDF</a>,
+				];
+			});
 		return table;
 	}, [documents]);
 
 	//
-	// B. Handle actions
-
-	const handleSubmit = async () => {
-		await fetch(`/api/fare-engine/${tokenContext.data.token}/${chargeId}/update`, {
-			body: JSON.stringify({ status: 'updated' }),
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			method: 'POST',
-		});
-	};
-
-	//
-	// C. Render components
+	// C. Setup form
 
 	const form = useForm({
 		initialValues: {
@@ -84,7 +75,20 @@ export function ChargesListItemDocs({ chargeId, documents }: ChargesListItemDocs
 	});
 
 	//
-	// B. Render components
+	// D. Handle actions
+
+	const handleSubmit = async () => {
+		await fetch(`/api/fare-engine/${tokenContext.data.token}/${chargeId}/update`, {
+			body: JSON.stringify(form.getValues()),
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			method: 'POST',
+		});
+	};
+
+	//
+	// E. Render components
 
 	if (!documents || documents.length === 0) {
 		return (

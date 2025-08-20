@@ -3,6 +3,10 @@
 import { type SshConfig, SshTunnelService, type SshTunnelServiceOptions } from '@/utils/ssh-tunnel.service';
 import { readFileSync } from 'node:fs';
 
+/* * */
+
+let GLOBAL_FARE_ENGINE_TUNNEL_INSTANCE: SshTunnelService | undefined;
+
 /**
  * This function retrieves the URL for the Fare Engine API.
  * It constructs the URL based on environment variables and returns it.
@@ -22,7 +26,8 @@ export async function getFareEngineUrl(): Promise<string> {
 	}
 
 	//
-	// Check if the tunnel is to be used
+	// Check if the tunnel is to be used.
+	// If not, return the direct URL.
 
 	if (process.env.FARE_ENGINE_USE_TUNNEL !== 'true') {
 		return process.env.FARE_ENGINE_API_BASE_URL;
@@ -78,7 +83,12 @@ export async function getFareEngineUrl(): Promise<string> {
 	//
 	// Actually create the SSH Tunnel connection
 
-	const sshTunnelConnection = await SshTunnelService.getInstance(sshConfig, sshOptions).connect();
+	if (!GLOBAL_FARE_ENGINE_TUNNEL_INSTANCE) {
+		GLOBAL_FARE_ENGINE_TUNNEL_INSTANCE = new SshTunnelService(sshConfig, sshOptions);
+	}
+
+	const sshTunnelConnection = await GLOBAL_FARE_ENGINE_TUNNEL_INSTANCE.connect();
+	// const sshTunnelConnection = await SshTunnelService.getInstance(sshConfig, sshOptions).connect();
 
 	//
 	// Construct the URL for the Fare Engine API using the local host and port
