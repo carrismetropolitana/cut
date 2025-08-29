@@ -2,13 +2,12 @@
 
 /* * */
 
-import { Grid } from '@/components/layout/Grid';
 import { NoDataLabel } from '@/components/layout/NoDataLabel';
-import { useTokenContext } from '@/contexts/Token.context';
+// import { useTokenContext } from '@/contexts/Token.context';
 import { parseFareEngineDocument } from '@/utils/parse-fare-engine-document';
 import { type FareEngineCharge } from '@carrismetropolitana/cut-pckg-types';
-import { Button, Table, TableData, TextInput } from '@mantine/core';
-import { useForm } from '@mantine/form';
+import { Table, TableData } from '@mantine/core';
+// import { useForm } from '@mantine/form';
 import { useTranslations } from 'next-intl';
 import { useMemo, useState } from 'react';
 
@@ -31,7 +30,7 @@ export function ChargesListItemDocs({ chargeId, documents }: ChargesListItemDocs
 
 	const t = useTranslations('charges.ChargesListItemDocs');
 
-	const tokenContext = useTokenContext();
+	// const tokenContext = useTokenContext();
 
 	const [isVisible, setIsVisible] = useState(false);
 
@@ -65,27 +64,27 @@ export function ChargesListItemDocs({ chargeId, documents }: ChargesListItemDocs
 	//
 	// C. Setup form
 
-	const form = useForm({
-		initialValues: {
-			billing_address: '',
-			email: '',
-			name: '',
-			tax_id: '',
-		},
-	});
+	// const form = useForm({
+	// 	initialValues: {
+	// 		billing_address: '',
+	// 		email: '',
+	// 		name: '',
+	// 		tax_id: '',
+	// 	},
+	// });
 
 	//
 	// D. Handle actions
 
-	const handleSubmit = async () => {
-		await fetch(`/api/fare-engine/${tokenContext.data.token}/${chargeId}/update`, {
-			body: JSON.stringify(form.getValues()),
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			method: 'POST',
-		});
-	};
+	// const handleSubmit = async () => {
+	// 	await fetch(`/api/fare-engine/${tokenContext.data.token}/${chargeId}/update`, {
+	// 		body: JSON.stringify(form.getValues()),
+	// 		headers: {
+	// 			'Content-Type': 'application/json',
+	// 		},
+	// 		method: 'POST',
+	// 	});
+	// };
 
 	//
 	// E. Render components
@@ -105,9 +104,9 @@ export function ChargesListItemDocs({ chargeId, documents }: ChargesListItemDocs
 
 			<Table data={tableData} highlightOnHover withTableBorder />
 
-			<p className={styles.updateLink} onClick={() => setIsVisible(!isVisible)}>Atualizar dados de faturação</p>
+			{/* <p className={styles.updateLink} onClick={() => setIsVisible(!isVisible)}>Atualizar dados de faturação</p> */}
 
-			{isVisible && (
+			{/* {isVisible && (
 				<form className={styles.form} onSubmit={form.onSubmit(handleSubmit)}>
 					<Grid columns="ab" withGap>
 						<TextInput label="Nome" {...form.getInputProps('name')} />
@@ -117,7 +116,7 @@ export function ChargesListItemDocs({ chargeId, documents }: ChargesListItemDocs
 					</Grid>
 					<Button type="submit">Atualizar</Button>
 				</form>
-			)}
+			)} */}
 
 		</div>
 	);
