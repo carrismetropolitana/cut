@@ -9,10 +9,10 @@ import styles from './styles.module.css';
 /* * */
 
 const LINKS = [
-	{ _id: 'conditions', href: '/conditions' },
-	{ _id: 'privacy', href: '/privacy' },
-	{ _id: 'cookies', href: '/cookies' },
-	{ _id: 'legal', href: '/legal' },
+	{ _id: 'conditions', href: 'https://carrismetropolitana.pt/assets/legal/cm-condicoes-gerais-transporte.pdf' },
+	{ _id: 'privacy', href: 'https://carrismetropolitana.pt/privacy' },
+	{ _id: 'cookies', href: 'https://carrismetropolitana.pt/cookies' },
+	{ _id: 'legal', href: 'https://carrismetropolitana.pt/legal' },
 ];
 
 /* * */
