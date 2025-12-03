@@ -58,7 +58,7 @@ export const TokenContextProvider = ({ children, token }: PropsWithChildren<{ to
 				// Sort the taps within each charge by record number
 				charge.taps.sort((a, b) => a.record_no - b.record_no);
 				// Remove duplicate taps for the same journey
-				const uniqueTaps = new Map(charge.taps.map(tap => [tap.ticketing.journey, tap]));
+				const uniqueTaps = new Map(charge.taps.map(tap => [`${tap.ticketing.journey}-${tap.record_no}`, tap]));
 				charge.taps = Array.from(uniqueTaps.values());
 				return charge;
 			});

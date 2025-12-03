@@ -19,14 +19,6 @@ interface ChargesListItemProps {
 /* * */
 
 export function ChargesListItem({ data }: ChargesListItemProps) {
-	//
-
-	//
-	// C. Render components
-
-	//
-	// C. Render components
-
 	return (
 		<div className={styles.root}>
 			<ChargesListItemHeader data={data} />
@@ -35,6 +27,4 @@ export function ChargesListItem({ data }: ChargesListItemProps) {
 			<ChargesListItemDocs chargeId={data.charge_id} documents={data.documents ?? []} />
 		</div>
 	);
-
-	//
 }
