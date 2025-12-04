@@ -19,6 +19,7 @@
 		"@tabler/icons-react": "3.35.0",
 		"@tmlmobilidade/dates": "20251204.1130.15",
 		"@tmlmobilidade/types": "20251204.1130.15",
+		"@tmlmobilidade/utils": "20251204.1130.15",
 		"dayjs": "1.11.19",
 		"luxon": "3.7.2",
 		"next": "16.0.7",

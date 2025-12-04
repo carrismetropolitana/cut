@@ -1,7 +1,7 @@
 /* * */
 
 import { FareEngineController } from '@/endpoints/fare-engine/fare-engine.controller';
-import { type FastifyInstance, FastifyService } from '@tmlmobilidade/connectors';
+import { type FastifyInstance, FastifyService } from '@tmlmobilidade/fastify';
 
 /* * */
 

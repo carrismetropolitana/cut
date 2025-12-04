@@ -1,6 +1,6 @@
 /* * */
 
-import { type FastifyReply, type FastifyRequest } from '@tmlmobilidade/connectors';
+import { type FastifyReply, type FastifyRequest } from '@tmlmobilidade/fastify';
 import { HttpException, HttpStatus } from '@tmlmobilidade/lib';
 
 /* * */

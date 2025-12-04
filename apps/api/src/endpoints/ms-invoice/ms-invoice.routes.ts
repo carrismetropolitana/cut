@@ -1,7 +1,7 @@
 /* * */
 
 import { MsInvoiceController } from '@/endpoints/ms-invoice/ms-invoice.controller';
-import { type FastifyInstance, FastifyService } from '@tmlmobilidade/connectors';
+import { type FastifyInstance, FastifyService } from '@tmlmobilidade/fastify';
 
 /* * */
 

@@ -1,7 +1,7 @@
 /* * */
 
 import { getMsInvoiceUrl } from '@/utils/get-ms-invoice-url';
-import { type FastifyReply, type FastifyRequest } from '@tmlmobilidade/connectors';
+import { type FastifyReply, type FastifyRequest } from '@tmlmobilidade/fastify';
 
 /* * */
 
