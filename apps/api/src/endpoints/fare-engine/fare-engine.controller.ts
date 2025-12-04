@@ -2,8 +2,8 @@
 
 import { getFareEngineUrl } from '@/utils/get-fare-engine-url';
 import { type FareEngineChargesResponse, FareEngineTapsResponse } from '@carrismetropolitana/cut-pckg-types';
+import { HttpStatus } from '@tmlmobilidade/consts';
 import { type FastifyReply, type FastifyRequest } from '@tmlmobilidade/fastify';
-import { HttpStatus } from '@tmlmobilidade/lib';
 
 /* * */
 
