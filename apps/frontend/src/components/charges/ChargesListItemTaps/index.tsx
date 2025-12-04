@@ -7,7 +7,7 @@ import { StopBadge } from '@/components/common/StopBadge';
 import { type Line, type Stop } from '@carrismetropolitana/api-types/network';
 import { type FareEngineCharge } from '@carrismetropolitana/cut-pckg-types';
 import { Table, type TableData } from '@mantine/core';
-import { Dates } from '@tmlmobilidade/utils';
+import { Dates } from '@tmlmobilidade/dates';
 import { useMemo } from 'react';
 import useSWR from 'swr';
 

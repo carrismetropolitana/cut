@@ -3,7 +3,7 @@
 /* * */
 
 import { type FareEngineCharge } from '@carrismetropolitana/cut-pckg-types';
-import { Dates } from '@tmlmobilidade/utils';
+import { Dates } from '@tmlmobilidade/dates';
 import { useMemo } from 'react';
 
 import styles from './styles.module.css';
